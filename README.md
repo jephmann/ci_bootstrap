@@ -27,27 +27,37 @@ directories within the application directory
 "Using the Framework"
 
 Starter Template
+
 Bootstrap: http://getbootstrap.com/examples/starter-template/
+
 ci_bootstrap: ...templates/starter
 - no notes yet
 
 Bootstrap Theme
+
 Bootstrap: http://getbootstrap.com/examples/theme/
+
 ci_boostrap: Yet to be built
 - no notes yet
 
 Grids
+
 Bootstrap: http://getbootstrap.com/examples/grid/
+
 ci_boostrap: Yet to be built
 - no notes yet
 
 Jumbotron
+
 Bootstrap: http://getbootstrap.com/examples/jumbotron/
+
 ci_boostrap: ...templates/jumbotron
 - no notes yet
 
 Narrow Jumbotron
+
 Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
+
 ci_boostrap: ...templates/jumbotronnarrow
 - no notes yet
 
@@ -56,12 +66,16 @@ ci_boostrap: ...templates/jumbotronnarrow
 "Custom Components"
 
 Cover
+
 Bootstrap: http://getbootstrap.com/examples/cover/
+
 ci_boostrap: ...templates/cover
 - no notes yet
 
 Carousel
+
 Bootstrap: http://getbootstrap.com/examples/carousel/
+
 ci_boostrap: ...templates/carousel
 - Per their sample: "If you're viewing this page via a file:// URL, the "next"
 and "previous" Glyphicon buttons on the left and right might not load/display
@@ -71,13 +85,17 @@ sample with three items. With count($array) I was also able to add a fourth
 "dot" of navigation.
 
 Blog
+
 Bootstrap: http://getbootstrap.com/examples/blog/
+
 ci_boostrap: Yet to be built
 - Bootstrap should have also included a blog entry form. I suppose that my
 deductive reasoning may inspire one.
 
 Dashboard
+
 Bootstrap: http://getbootstrap.com/examples/dashboard/
+
 ci_boostrap: ...templates/dashboard
 - no notes yet
 
