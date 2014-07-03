@@ -6,29 +6,31 @@
  */
     class Templates extends CI_Controller
     {
-
-	public function cover()
-	{
+        
+        public function starter()
+        {
+            $lead_p = 'Use this document as a way to quickly start any new project.';
+            $lead_p .= '<br />';
+            $lead_p .= 'All you get is this text and a mostly barebones HTML document.';
             
-            $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
-            $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
-    
             $data['bootstrap']      = base_url() . 'bootstrap/';
             $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
             $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
-            $data['custom_css']     = 'cover';
+            $data['custom_css']     = 'starter-template';
             $data['brand']          = 'CodeIgniter BootStrap';
-            $data['title']          = "Cover Template for Bootstrap";            
-            $data['h1']             = $data['title'];            
-            $data['inner_p']        = $inner_p;
+            $data['title']          = "Starter Template for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/cover/masthead',$data);
-            $this->load->view('bootstrap/cover/inner',$data);
-            $this->load->view('bootstrap/cover/mastfoot',$data);
-            $this->load->view('bootstrap/foot_docs',$data);
-
-	}
+            $this->load->view('bootstrap/starter/navbar',$data);
+            $this->load->view('bootstrap/starter/starter',$data);
+            $this->load->view('bootstrap/foot',$data);
+            
+        }
+        
+        // public function theme(){}
+        // public function grids(){}
 
 	public function jumbotron()
 	{
@@ -54,28 +56,6 @@
 
 	}
         
-        public function starter()
-        {
-            $lead_p = 'Use this document as a way to quickly start any new project.';
-            $lead_p .= '<br />';
-            $lead_p .= 'All you get is this text and a mostly barebones HTML document.';
-            
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
-            $data['custom_css']     = 'starter-template';
-            $data['brand']          = 'CodeIgniter BootStrap';
-            $data['title']          = "Starter Template for Bootstrap";            
-            $data['h1']             = $data['title'];
-            $data['lead_p']         = $lead_p;
-        
-            $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/starter/navbar',$data);
-            $this->load->view('bootstrap/starter/starter',$data);
-            $this->load->view('bootstrap/foot',$data);
-            
-        }
-        
         public function jumbotronnarrow()
         {
             $lead_p = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
@@ -98,6 +78,29 @@
             $this->load->view('bootstrap/jumbotron-narrow/foot',$data);
             
         }
+
+	public function cover()
+	{
+            
+            $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
+            $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
+    
+            $data['bootstrap']      = base_url() . 'bootstrap/';
+            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
+            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['custom_css']     = 'cover';
+            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['title']          = "Cover Template for Bootstrap";            
+            $data['h1']             = $data['title'];            
+            $data['inner_p']        = $inner_p;
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/cover/masthead',$data);
+            $this->load->view('bootstrap/cover/inner',$data);
+            $this->load->view('bootstrap/cover/mastfoot',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
+
+	}
         
         public function carousel()
         {
@@ -209,6 +212,8 @@
             $this->load->view('bootstrap/carousel/footer',$data);
             $this->load->view('bootstrap/foot_docs',$data); 
         }
+        
+        // public function blog(){}
         
         public function dashboard()
         {
