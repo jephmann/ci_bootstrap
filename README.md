@@ -1,9 +1,11 @@
-A work in progress.
+This work in progress is a combination of the Bootstrap 3.2.0 front-end
+responsive framework with the CodeIgniter 2.2.0 backend PHP MVC framework. Both
+versions were released in June 2014 and thus are the frameworks' latest
+versions as I write this (July 2014).
 
-A combination of the Bootstrap 3.2.0 front-end responsive framework with the CodeIgniter 2.2.0
-backend PHP MVC framework.
-
-Both versions were released in June.
+As this project has no databases, passwords or anything else I might withhold
+from GitHub, this could soon become that rare GitHub project of mine which upon
+completion could be copied whole.
 
 *First,* my goals for this project:
 - Recreate as many of the samples in Bootstrap's "Getting Started" page as I can
@@ -20,8 +22,9 @@ MVC back end with Bootstrap's responsive front end
 - Make any changes to CodeIgniter outside the config, controllers and views
 directories within the application directory
 
-*Coming soon:* my list of the changes I made to CodeIgniter to accommodate
-Bootstrap
+*Coming soon:*
+- my list of the changes I made to CodeIgniter to accommodate Bootstrap
+- my list of "localhost/ci_bootstrap" links and their Bootstrap counterparts
 
 References:
 - http://getbootstrap.com/getting-started/ 
