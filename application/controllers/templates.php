@@ -103,89 +103,89 @@
         {
             $carousel = array(
                 array(
-                    'item_class' => 'item active',
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'First slide',
-                    'h1' => 'Example headline.',
-                    'p' => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
-                    'href' => '#',
-                    'button' => 'Sign up today',
+                    'item_class'    => 'item active',
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'       => 'First slide',
+                    'h1'            => 'Example headline.',
+                    'p'             => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
+                    'href'          => '#',
+                    'button'        => 'Sign up today',
                 ),
                 array(
-                    'item_class' => 'item',
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Second slide',
-                    'h1' => 'Another example headline.',
-                    'p' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'href' => '#',
-                    'button' => 'Learn more',
+                    'item_class'    => 'item',
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'       => 'Second slide',
+                    'h1'            => 'Another example headline.',
+                    'p'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'href'          => '#',
+                    'button'        => 'Learn more',
                 ),
                 array(
-                    'item_class' => 'item',
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Third slide',
-                    'h1' => 'One more for good measure.',
-                    'p' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'href' => '#',
-                    'button' => 'Browse gallery',
+                    'item_class'    => 'item',
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'       => 'Third slide',
+                    'h1'            => 'One more for good measure.',
+                    'p'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'href'          => '#',
+                    'button'        => 'Browse gallery',
                 ),
                 array(
-                    'item_class' => 'item',
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Fourth forth',
-                    'h1' => 'Because I can.',
-                    'p' => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
-                    'href' => '#',
-                    'button' => 'So there',
+                    'item_class'    => 'item',
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'       => 'Fourth forth',
+                    'h1'            => 'Because I can.',
+                    'p'             => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
+                    'href'          => '#',
+                    'button'        => 'So there',
                 ),
             );
             $marketing = array(
                 array(
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Generic placeholder image 1',
-                    'h2' => 'Heading 1',
-                    'p' => "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
-                    'href' => '#',
-                    'button' => 'View details 1',
+                    'img_src'   => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'   => 'Generic placeholder image 1',
+                    'h2'        => 'Heading 1',
+                    'p'         => "Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.",
+                    'href'      => '#',
+                    'button'    => 'View details 1',
                 ),
                 array(
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Generic placeholder image 2',
-                    'h2' => 'Heading 2',
-                    'p' => "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.",
-                    'href' => '#',
-                    'button' => 'View details 2',
+                    'img_src'   => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'   => 'Generic placeholder image 2',
+                    'h2'        => 'Heading 2',
+                    'p'         => "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.",
+                    'href'      => '#',
+                    'button'    => 'View details 2',
                 ),
                 array(
-                    'img_src' => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_alt' => 'Generic placeholder image 3',
-                    'h2' => 'Heading 3',
-                    'p' => "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-                    'href' => '#',
-                    'button' => 'View details 3',
+                    'img_src'   => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_alt'   => 'Generic placeholder image 3',
+                    'h2'        => 'Heading 3',
+                    'p'         => "Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
+                    'href'      => '#',
+                    'button'    => 'View details 3',
                 ),
             );
             $featurette = array(
                 array(
-                    'h2' => "First featurette heading",
-                    'muted' => "It'll blow your mind.",
-                    'lead_p' => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
-                    'img_data-src' => 'holder.js/500x500/auto',
-                    'img_alt' => 'Generic placeholder image',
+                    'h2'            => "First featurette heading",
+                    'muted'         => "It'll blow your mind.",
+                    'lead_p'        => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
+                    'img_data-src'  => 'holder.js/500x500/auto',
+                    'img_alt'       => 'Generic placeholder image',
                 ),
                 array(
-                    'h2' => "Oh yeah, it's that good.",
-                    'muted' => "See for yourself.",
-                    'lead_p' => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
-                    'img_data-src' => 'holder.js/500x500/auto',
-                    'img_alt' => 'Generic placeholder image',
+                    'h2'            => "Oh yeah, it's that good.",
+                    'muted'         => "See for yourself.",
+                    'lead_p'        => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
+                    'img_data-src'  => 'holder.js/500x500/auto',
+                    'img_alt'       => 'Generic placeholder image',
                 ),
                 array(
-                    'h2' => "And lastly, this one.",
-                    'muted' => "Checkmate.",
-                    'lead_p' => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
-                    'img_data-src' => 'holder.js/500x500/auto',
-                    'img_alt' => 'Generic placeholder image',
+                    'h2'            => "And lastly, this one.",
+                    'muted'         => "Checkmate.",
+                    'lead_p'        => "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.",
+                    'img_data-src'  => 'holder.js/500x500/auto',
+                    'img_alt'       => 'Generic placeholder image',
                 ),
             );
             
@@ -208,5 +208,59 @@
             $this->load->view('bootstrap/carousel/featurette',$data);
             $this->load->view('bootstrap/carousel/footer',$data);
             $this->load->view('bootstrap/foot_docs',$data); 
+        }
+        
+        public function dashboard()
+        {
+            $dashboard = array(
+                array(
+                    'img_data-src'  => 'holder.js/200x200/auto/sky',
+                    'img_alt'       => 'Generic placeholder thumbnail 1',
+                    'h4'            => 'Label 1',
+                    'text-muted'    => 'Something else 1',
+                ),
+                array(
+                    'img_data-src'  => 'holder.js/200x200/auto/vine',
+                    'img_alt'       => 'Generic placeholder thumbnail 2',
+                    'h4'            => 'Label 2',
+                    'text-muted'    => 'Something else 2',
+                ),
+                array(
+                    'img_data-src'  => 'holder.js/200x200/auto/sky',
+                    'img_alt'       => 'Generic placeholder thumbnail 3',
+                    'h4'            => 'Label 3',
+                    'text-muted'    => 'Something else 3',
+                ),
+                array(
+                    'img_data-src'  => 'holder.js/200x200/auto/vine',
+                    'img_alt'       => 'Generic placeholder thumbnail 4',
+                    'h4'            => 'Label 4',
+                    'text-muted'    => 'Something else 4',
+                ),
+            );
+            $thead = array(
+                '#','Header1','Header2','Header3','Header4',
+            );
+            
+            
+            $data['bootstrap']      = base_url() . 'bootstrap/';
+            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
+            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['custom_css']     = 'dashboard';
+            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['title']          = "Dashboard Template for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['h2']             = "Table Section";
+            
+            $data['dashboard']  = $dashboard;
+            $data['thead']      = $thead;
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/dashboard/navbar',$data);
+            $this->load->view('bootstrap/dashboard/nav_sidebar',$data);
+            $this->load->view('bootstrap/dashboard/dashboard',$data);
+            $this->load->view('bootstrap/dashboard/table',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
+            
         }
     }
