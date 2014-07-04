@@ -109,8 +109,25 @@ ci_boostrap: ...templates/dashboard
 
 =====
 
-*Coming soon:*
-- my list of the changes I made to CodeIgniter to accommodate Bootstrap
+*Additional pages*
+
+- The "home" page, based on the Cover template
+- A "contents" page, based on the Starter template
+- An "about" page, based on the Starter template
+- A "contact" page, based on the Starter template
+
+Suggested additional pages:
+- At least one data entry form for the blog
+
+=====
+
+*CodeIgniter accommodations for Bootstrap:*
+
+- ci_bootstrap/bootstrap -- the "assets" directory from Bootstrap
+- ci_bootstrap/application/views/bootstrap -- "deconstructed" bootstrap
+templates, revised to include Controller variables
+
+=====
 
 References:
 - http://getbootstrap.com/getting-started/ 
