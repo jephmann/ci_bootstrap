@@ -6,22 +6,23 @@
  */
     class Templates extends CI_Controller
     {
+        /*
+         * Globals
+         */
+        private $bootstrap;
+        private $bootstrap_css;
+        private $bootstrap_js;
+        private $navbar;
+        
         public function __construct() {
             parent::__construct();
             
+            $this->bootstrap        = base_url().'bootstrap/';  // path to Bootstrap assets
+            $this->bootstrap_css    = $this->bootstrap.'css/';  // path to Bootstrap *.css
+            $this->bootstrap_js     = $this->bootstrap.'js/';   // path to Bootstrap *.js
             
-        }
-        
-        
-        
-        public function index()
-        {
-            /*
-             * Special for this demo
-             * Soon to be based on the cover template
-             * Currently under construction
-             */  
-            $navbar = array(
+            // common navigation
+            $this->navbar = array(
                 array(
                     'href' => 'contents',
                     'text' => 'Contents',
@@ -36,18 +37,25 @@
                 ),
             );
             
+        }
+        
+        public function index()
+        {
+            /*
+             * Special for this demo, based on the cover template
+             */
             
             $inner_p = 'Welcome to CodeIgniter Bootstrap';
             $inner_p .= '<br />A combination of two frameworks, back-end and front-end';
             
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Home";            
             $data['h1']             = $data['title'];
-            $data['navbar']         = $navbar;            
+            $data['navbar']         = $this->navbar;            
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = site_url('contents');
             $data['btn_text']       = 'Contents';
@@ -62,33 +70,18 @@
         public function starter()
         {
             
-            $navbar = array(
-                array(
-                    'href' => 'contents',
-                    'text' => 'Contents',
-                ),
-                array(
-                    'href' => 'about',
-                    'text' => 'About',
-                ),
-                array(
-                    'href' => 'contact',
-                    'text' => 'Contact',
-                ),
-            );
-            
             $lead_p = 'Use this document as a way to quickly start any new project.';
             $lead_p .= '<br />';
             $lead_p .= 'All you get is this text and a mostly barebones HTML document.';
             
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Starter Template for Bootstrap";            
             $data['h1']             = $data['title'];
-            $data['navbar']         = $navbar;
+            $data['navbar']         = $this->navbar; 
             $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -106,12 +99,12 @@
             $jumbo_p = 'This is a template for a simple marketing or informational website.';
             $jumbo_p .= ' It includes a large callout called a jumbotron and three supporting pieces of content.';
             $jumbo_p .= ' Use it as a starting point to create something more unique.';
-    
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Jumbotron Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['jumbo_p']        = $jumbo_p;
@@ -130,11 +123,11 @@
             $lead_p = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
             $lead_p .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
             
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron-narrow';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Narrow Jumbotron Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['lead_p']         = $lead_p;
@@ -151,31 +144,16 @@
 	public function cover()
 	{
             
-            $navbar = array(
-                array(
-                    'href' => 'contents',
-                    'text' => 'Contents',
-                ),
-                array(
-                    'href' => 'about',
-                    'text' => 'About',
-                ),
-                array(
-                    'href' => 'contact',
-                    'text' => 'Contact',
-                ),
-            );
-            
             $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
             $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
-    
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Cover Template for Bootstrap";
-            $data['navbar']         = $navbar;            
+            $data['navbar']         = $this->navbar; 
             $data['h1']             = $data['title'];            
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = '#';
