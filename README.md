@@ -22,6 +22,8 @@ MVC back end with Bootstrap's responsive front end
 - Make any changes to CodeIgniter outside the config, controllers and views
 directories within the application directory
 
+=====
+
 *Compare:*
 
 "Using the Framework"
@@ -100,6 +102,8 @@ ci_boostrap: ...templates/dashboard
 - no notes yet
 
 "Experiments" -- yet to be built
+
+=====
 
 *Coming soon:*
 - my list of the changes I made to CodeIgniter to accommodate Bootstrap
