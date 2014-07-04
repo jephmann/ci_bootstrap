@@ -33,7 +33,8 @@ Starter Template
 Bootstrap: http://getbootstrap.com/examples/starter-template/
 
 ci_bootstrap: ...templates/starter
-- no notes yet
+- Unlike most of the other templates, this template was reapplied to at least
+one other page (controller method) in the project (Contents, About, Contact)
 
 Bootstrap Theme
 
@@ -72,7 +73,10 @@ Cover
 Bootstrap: http://getbootstrap.com/examples/cover/
 
 ci_boostrap: ...templates/cover
-- no notes yet
+- Unlike most of the other templates, this template was reapplied to one other
+page (controller method) in the project: templates/index. In CodeIgniter I
+replaced "welcome" with "templates" as the project's default controller, thus
+making "templates/index" the project's home page. 
 
 Carousel
 
