@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Description of pages
  *
@@ -6,9 +6,77 @@
  */
     class Templates extends CI_Controller
     {
+        public function __construct() {
+            parent::__construct();
+            
+            
+        }
+        
+        
+        
+        public function index()
+        {
+            /*
+             * Special for this demo
+             * Soon to be based on the cover template
+             * Currently under construction
+             */  
+            $navbar = array(
+                array(
+                    'href' => 'contents',
+                    'text' => 'Contents',
+                ),
+                array(
+                    'href' => 'about',
+                    'text' => 'About',
+                ),
+                array(
+                    'href' => 'contact',
+                    'text' => 'Contact',
+                ),
+            );
+            
+            
+            $inner_p = 'Welcome to CodeIgniter Bootstrap';
+            $inner_p .= '<br />A combination of two frameworks, back-end and front-end';
+            
+            $data['bootstrap']      = base_url() . 'bootstrap/';
+            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
+            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['custom_css']     = 'cover';
+            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['title']          = "Home";            
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $navbar;            
+            $data['inner_p']        = $inner_p;
+            $data['btn_href']       = site_url('contents');
+            $data['btn_text']       = 'Contents';
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/cover/masthead',$data);
+            $this->load->view('bootstrap/cover/inner',$data);
+            $this->load->view('bootstrap/cover/mastfoot',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
+        }
         
         public function starter()
         {
+            
+            $navbar = array(
+                array(
+                    'href' => 'contents',
+                    'text' => 'Contents',
+                ),
+                array(
+                    'href' => 'about',
+                    'text' => 'About',
+                ),
+                array(
+                    'href' => 'contact',
+                    'text' => 'Contact',
+                ),
+            );
+            
             $lead_p = 'Use this document as a way to quickly start any new project.';
             $lead_p .= '<br />';
             $lead_p .= 'All you get is this text and a mostly barebones HTML document.';
@@ -20,6 +88,7 @@
             $data['brand']          = 'CodeIgniter BootStrap';
             $data['title']          = "Starter Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['navbar']         = $navbar;
             $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -82,6 +151,21 @@
 	public function cover()
 	{
             
+            $navbar = array(
+                array(
+                    'href' => 'contents',
+                    'text' => 'Contents',
+                ),
+                array(
+                    'href' => 'about',
+                    'text' => 'About',
+                ),
+                array(
+                    'href' => 'contact',
+                    'text' => 'Contact',
+                ),
+            );
+            
             $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
             $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
     
@@ -90,9 +174,12 @@
             $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
             $data['custom_css']     = 'cover';
             $data['brand']          = 'CodeIgniter BootStrap';
-            $data['title']          = "Cover Template for Bootstrap";            
+            $data['title']          = "Cover Template for Bootstrap";
+            $data['navbar']         = $navbar;            
             $data['h1']             = $data['title'];            
             $data['inner_p']        = $inner_p;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'Learn more';
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/cover/masthead',$data);
