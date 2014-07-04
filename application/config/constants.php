@@ -36,6 +36,16 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|--------------------------------------------------------------------------
+| Custom Constants for ci_bootstrap
+|--------------------------------------------------------------------------
+|
+| Created especiall for this project
+|
+*/
+
+define('CB_BRAND','CodeIgniter BootStrap'); // The name of this project
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
