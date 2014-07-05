@@ -94,9 +94,12 @@ Blog
 
 Bootstrap: http://getbootstrap.com/examples/blog/
 
-ci_boostrap: Yet to be built
+ci_boostrap: ...templates/blog
+- no notes yet
 - Bootstrap should have also included a blog entry form. I suppose that my
-deductive reasoning may inspire one.
+deductive reasoning may inspire one. TinyMCE [http://www.tinymce.com/] ought to
+be a part of such a form, as the posts allow a variety of unformatted HTML
+tags.
 
 Dashboard
 

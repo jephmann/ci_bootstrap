@@ -130,6 +130,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Narrow Jumbotron Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar; 
             $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -257,11 +258,11 @@
                 ),
             );
             
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'carousel';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Carousel Template for Bootstrap";            
             $data['h1']             = $data['title'];
             
@@ -278,7 +279,69 @@
             $this->load->view('bootstrap/foot_docs',$data); 
         }
         
-        // public function blog(){}
+        public function blog()
+        {
+            $posts = array(
+                array(
+                    'title'     => 'Sample blog post',
+                    'date'      => '2014-01-01',
+                    'href'      => '#',
+                    'author'    => 'Mark',
+                    'text'      => '<p>This blog post shows a few different types of content that is supported and styled with Bootstrap.
+                        <em>Basic typography, images, and code are all supported.</em></p>
+                        <hr>
+                        <blockquote>
+                        <p>They do not all have <strong>blockquotes</strong>.</p>
+                        </blockquote>',
+                ),
+                array(
+                    'title'     => 'Another blog post',
+                    'date'      => '2013-12-23',
+                    'href'      => '#',
+                    'author'    => 'Jacob',
+                    'text'      => '<p>'
+                    . 'Lots of text including HTML tags without any attributes.'
+                    . '</p>'
+                    . '<pre><code>They do not all have code blocks</code></pre>',
+                ),
+                array(
+                    'title'     => 'New feature',
+                    'date'      => '2013-12-14',
+                    'href'      => '#',
+                    'author'    => 'Chris',
+                    'text'      => '<p>Lots of text including HTML tags without any attributes.</p>'
+                    . '<h2>They do not all have Headings</h2>'
+                    . '<h3>They do not all have Subheadings</h3>'
+                    . '<ul><li>They do not all have lists.</li></ul>'
+                    . '<ol><li>They do not all have lists.</li></ol>'
+                    . '<p>Bootstrap did not supply a form for blog entries. I (Jeffrey Hartmann) would recommend that '
+                    . '<a href="http://www.tinymce.com/" target="_blank">TinyMCE</a> be a part of it.</p>',
+                ),
+            );
+            
+            $lead_p = 'The official example template of creating a blog with Bootstrap.';
+            
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'blog';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Blog Template for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar; 
+            $data['lead_p']         = $lead_p;
+            $data['posts']          = $posts;
+        
+            $this->load->view('bootstrap/head',$data);        
+            $this->load->view('bootstrap/blog/masthead',$data);        
+            $this->load->view('bootstrap/blog/header',$data);        
+            $this->load->view('bootstrap/blog/blog',$data);            
+            $this->load->view('bootstrap/blog/sidebar',$data);
+            $this->load->view('bootstrap/blog/footer',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
+
+        }
         
         public function dashboard()
         {
@@ -313,13 +376,14 @@
             );
             
             
-            $data['bootstrap']      = base_url() . 'bootstrap/';
-            $data['bootstrap_css']  = $data['bootstrap'] . 'css/';
-            $data['bootstrap_js']   = $data['bootstrap'] . 'js/';
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'dashboard';
-            $data['brand']          = 'CodeIgniter BootStrap';
+            $data['brand']          = CB_BRAND;
             $data['title']          = "Dashboard Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar; 
             $data['h2']             = "Table Section";
             
             $data['dashboard']  = $dashboard;

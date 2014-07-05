@@ -21,7 +21,7 @@
         <p>
             <a href="<?php echo site_url('templates/cover') ?>">Cover</a><br />
             <a href="<?php echo site_url('templates/carousel') ?>">Carousel</a><br />
-            Blog<br />
+            <a href="<?php echo site_url('templates/blog') ?>">Blog</a><br />
             <a href="<?php echo site_url('templates/dashboard') ?>">Dashboard</a><br />
             Sign-in page<br />
             Justified nav<br />
