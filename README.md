@@ -5,11 +5,9 @@ responsive framework with the CodeIgniter 2.2.0 backend PHP MVC framework. Both
 versions were released in June 2014 and thus are the frameworks' latest
 versions as I write this (July 2014).
 
-As this project has no databases, passwords or anything else I might withhold
-from GitHub, this could soon become that rare GitHub project of mine which upon
-completion could be copied whole.
-
-=====
+Whereas this project has no databases, passwords or anything else which I might
+withhold from GitHub, this could soon become that rare GitHub project of mine
+which upon completion you may copy whole.
 
 #### My goals for this project:
 - Recreate as many of the samples in Bootstrap's "Getting Started" page as I can
@@ -25,6 +23,7 @@ MVC back end with Bootstrap's responsive front end
 - Use assets other than those of Bootstrap
 - Connect to a database (array and objects are data sources for this project)
 - Create any CodeIgniter data models (the "M" in MVC)
+- Include login functionality
 - Make any changes to CodeIgniter outside the *config*, *controllers* and
 *views* directories within the *application* directory
 
