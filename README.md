@@ -1,3 +1,5 @@
+# CodeIgniter BootStrap
+
 This work in progress is a combination of the Bootstrap 3.2.0 front-end
 responsive framework with the CodeIgniter 2.2.0 backend PHP MVC framework. Both
 versions were released in June 2014 and thus are the frameworks' latest
@@ -6,6 +8,8 @@ versions as I write this (July 2014).
 As this project has no databases, passwords or anything else I might withhold
 from GitHub, this could soon become that rare GitHub project of mine which upon
 completion could be copied whole.
+
+=====
 
 *First,* my goals for this project:
 - Recreate as many of the samples in Bootstrap's "Getting Started" page as I can
@@ -24,11 +28,11 @@ directories within the application directory
 
 =====
 
-*Compare:*
+## *Compare:*
 
-"Using the Framework"
+### "Using the Framework"
 
-Starter Template
+#### Starter Template
 
 Bootstrap: http://getbootstrap.com/examples/starter-template/
 
@@ -36,39 +40,39 @@ ci_bootstrap: ...templates/starter
 - Unlike most of the other templates, this template was reapplied to at least
 one other page (controller method) in the project (Contents, About, Contact)
 
-Bootstrap Theme
+#### Bootstrap Theme
 
 Bootstrap: http://getbootstrap.com/examples/theme/
 
 ci_boostrap: Yet to be built
 - no notes yet
 
-Grids
+#### Grids
 
 Bootstrap: http://getbootstrap.com/examples/grid/
 
 ci_boostrap: Yet to be built
 - no notes yet
 
-Jumbotron
+#### Jumbotron
 
 Bootstrap: http://getbootstrap.com/examples/jumbotron/
 
 ci_boostrap: ...templates/jumbotron
 - no notes yet
 
-Narrow Jumbotron
+#### Narrow Jumbotron
 
 Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
 
 ci_boostrap: ...templates/jumbotronnarrow
 - no notes yet
 
-"Navbars in Action" -- yet to be built
+### "Navbars in Action" -- yet to be built
 
-"Custom Components"
+### "Custom Components"
 
-Cover
+#### Cover
 
 Bootstrap: http://getbootstrap.com/examples/cover/
 
@@ -78,7 +82,7 @@ page (controller method) in the project: templates/index. In CodeIgniter I
 replaced "welcome" with "templates" as the project's default controller, thus
 making "templates/index" the project's home page. 
 
-Carousel
+#### Carousel
 
 Bootstrap: http://getbootstrap.com/examples/carousel/
 
@@ -90,7 +94,7 @@ properly due to web browser security rules."
 sample with three items. With count($array) I was also able to add a fourth
 "dot" of navigation.
 
-Blog
+#### Blog
 
 Bootstrap: http://getbootstrap.com/examples/blog/
 
@@ -101,25 +105,25 @@ deductive reasoning may inspire one. TinyMCE [http://www.tinymce.com/] ought to
 be a part of such a form, as the posts allow a variety of unformatted HTML
 tags.
 
-Dashboard
+#### Dashboard
 
 Bootstrap: http://getbootstrap.com/examples/dashboard/
 
 ci_boostrap: ...templates/dashboard
 - no notes yet
 
-Sign-in page
+#### Sign-in page
 
 Bootstrap: http://getbootstrap.com/examples/signin/
 
 ci_boostrap: ...templates/signin
 - Added a provision for the form's action.
 
-"Experiments" -- yet to be built
+### "Experiments" -- yet to be built
 
 =====
 
-*Additional pages*
+## *Additional pages*
 
 - The "home" page, based on the Cover template
 - A "contents" page, based on the Starter template
@@ -131,7 +135,7 @@ Suggested additional pages:
 
 =====
 
-*CodeIgniter accommodations for Bootstrap:*
+## *CodeIgniter accommodations for Bootstrap:*
 
 - ci_bootstrap/bootstrap -- the "assets" directory from Bootstrap
 - ci_bootstrap/application/views/bootstrap -- "deconstructed" bootstrap
@@ -139,5 +143,8 @@ templates, revised to include Controller variables
 
 =====
 
-References:
-- http://getbootstrap.com/getting-started/ 
+## References:
+
+- http://getbootstrap.com/getting-started/
+- http://ellislab.com/codeigniter
+- http://www.php.net/ 
