@@ -8,5 +8,5 @@
             </li>
             <?php endfor; ?>
         </ul>
-        <h3 class="text-muted"><?php echo $brand ?></h3>
+        <h3 class="text-muted"><a href="<?php echo site_url('') ?>"><?php echo $brand ?></a></h3>
     </div>

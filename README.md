@@ -33,6 +33,7 @@ directories within the application directory
 ### "Using the Framework"
 
 #### Starter Template
+"Nothing but the basics: compiled CSS and JavaScript along with a container."
 
 Bootstrap: http://getbootstrap.com/examples/starter-template/
 
@@ -55,6 +56,7 @@ ci_boostrap: Yet to be built
 - no notes yet
 
 #### Jumbotron
+"Build around the jumbotron with a navbar and some basic grid columns."
 
 Bootstrap: http://getbootstrap.com/examples/jumbotron/
 
@@ -62,17 +64,47 @@ ci_boostrap: ...templates/jumbotron
 - no notes yet
 
 #### Narrow Jumbotron
+"Build a more custom page by narrowing the default container and jumbotron."
 
 Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
 
 ci_boostrap: ...templates/jumbotronnarrow
 - no notes yet
 
-### "Navbars in Action" -- yet to be built
+### "Navbars in Action"
+- Whereas each of the other templates gets its own subdirectory under
+"...views/bootstrap/", these navbar templates share files in the
+"...views/bootstrap/navbar" subdirectory.
+
+#### Navbar
+"Super basic template that includes the navbar along with some additional content."
+
+Bootstrap: http://getbootstrap.com/examples/navbar/
+
+ci_boostrap: ...templates/navbar
+- no notes yet
+
+#### Static top navbar
+"Super basic template with a static top navbar along with some additional content."
+
+Bootstrap: http://getbootstrap.com/examples/navbar-static-top/
+
+ci_boostrap: ...templates/navbar_static
+- no notes yet
+
+#### Fixed navbar
+"Super basic template with a fixed top navbar along with some additional content."
+
+Bootstrap: http://getbootstrap.com/examples/navbar-fixed-top/
+
+ci_boostrap: ...templates/navbar_fixed
+- no notes yet
+
 
 ### "Custom Components"
 
 #### Cover
+"A one-page template for building simple and beautiful home pages."
 
 Bootstrap: http://getbootstrap.com/examples/cover/
 
@@ -83,6 +115,7 @@ replaced "welcome" with "templates" as the project's default controller, thus
 making "templates/index" the project's home page. 
 
 #### Carousel
+"Customize the navbar and carousel, then add some new components."
 
 Bootstrap: http://getbootstrap.com/examples/carousel/
 
@@ -95,6 +128,7 @@ sample with three items. With count($array) I was also able to add a fourth
 "dot" of navigation.
 
 #### Blog
+"Simple two-column blog layout with custom navigation, header, and type."
 
 Bootstrap: http://getbootstrap.com/examples/blog/
 
@@ -106,6 +140,7 @@ be a part of such a form, as the posts allow a variety of unformatted HTML
 tags.
 
 #### Dashboard
+"Basic structure for a admin dashboard with fixed sidebar and navbar."
 
 Bootstrap: http://getbootstrap.com/examples/dashboard/
 
@@ -113,6 +148,7 @@ ci_boostrap: ...templates/dashboard
 - no notes yet
 
 #### Sign-in page
+"Custom form layout and design for a simple sign in form."
 
 Bootstrap: http://getbootstrap.com/examples/signin/
 

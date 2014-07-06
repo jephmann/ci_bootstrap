@@ -13,9 +13,9 @@
         </p>
         <h3>"Navbars in action"</h3>
         <p>
-            Navbar<br />
-            Static top navbar<br />
-            Fixed navbar<br />
+            <a href="<?php echo site_url('templates/navbar') ?>">Navbar</a><br />
+            <a href="<?php echo site_url('templates/navbar_static') ?>">Static top navbar</a><br />
+            <a href="<?php echo site_url('templates/navbar_fixed') ?>">Fixed navbar</a><br />
         </p>
         <h3>"Custom components"</h3>
         <p>

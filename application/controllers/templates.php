@@ -13,6 +13,7 @@
         private $bootstrap_css;
         private $bootstrap_js;
         private $navbar;
+        private $navbar_nav;
         
         public function __construct() {
             parent::__construct();
@@ -26,14 +27,33 @@
                 array(
                     'href' => 'contents',
                     'text' => 'Contents',
+                    'p' => 'Contents stuff',
                 ),
                 array(
                     'href' => 'about',
                     'text' => 'About',
+                    'p' => 'About stuff',
                 ),
                 array(
                     'href' => 'contact',
                     'text' => 'Contact',
+                    'p' => 'Contact stuff',
+                ),
+            );
+            
+            // navbar navigation (for the navbar templates)
+            $this->navbar_nav = array(
+                array(
+                    'href' => 'templates/navbar',
+                    'text' => 'Default',
+                ),
+                array(
+                    'href' => 'templates/navbar_static',
+                    'text' => 'Static top',
+                ),
+                array(
+                    'href' => 'templates/navbar_fixed',
+                    'text' => 'Fixed top',
                 ),
             );
             
@@ -55,7 +75,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Home";            
             $data['h1']             = $data['title'];
-            $data['navbar']         = $this->navbar;            
+            $data['navbar']         = $this->navbar;
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = site_url('contents');
             $data['btn_text']       = 'Contents';
@@ -81,7 +101,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Starter Template for Bootstrap";            
             $data['h1']             = $data['title'];
-            $data['navbar']         = $this->navbar; 
+            $data['navbar']         = $this->navbar;
             $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -107,6 +127,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Jumbotron Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
             $data['jumbo_p']        = $jumbo_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -130,7 +151,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Narrow Jumbotron Template for Bootstrap";            
             $data['h1']             = $data['title'];
-            $data['navbar']         = $this->navbar; 
+            $data['navbar']         = $this->navbar;
             $data['lead_p']         = $lead_p;
         
             $this->load->view('bootstrap/head',$data);
@@ -141,6 +162,102 @@
             $this->load->view('bootstrap/jumbotron-narrow/foot',$data);
             
         }
+        
+        public function navbar()
+        {
+            $jumbo_p = "This example is a quick exercise to illustrate how the"
+                    . " default, static navbar and fixed to top navbar work. It"
+                    . " includes the responsive CSS and HTML, so it also adapts"
+                    . " to your viewport and device.";
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'navbar';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Navbar Template for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
+            $data['navbar_nav']     = $this->navbar_nav;
+            $data['navbar_class_top']   = NULL;
+            $data['container_class']   = "container-fluid";
+            $data['jumbo_p']        = $jumbo_p;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'View navbar docs &raquo;';
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/navbar/navbar',$data);
+            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/foot',$data);
+            
+        }
+        
+        public function navbar_static()
+        {
+            $jumbo_p = "This example is a quick exercise to illustrate how the"
+                    . " default, static navbar and fixed to top navbar work. It"
+                    . " includes the responsive CSS and HTML, so it also adapts"
+                    . " to your viewport and device.";
+            $jumbo_p .= "</p><p>";
+            $jumbo_p .= "To see the difference between static and fixed top"
+                    . " navbars, just scroll.";
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'navbar-static-top';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Static Top Navbar Example for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
+            $data['navbar_nav']     = $this->navbar_nav;
+            $data['navbar_class_top']   = " navbar-static-top";
+            $data['container_class']   = "container";
+            $data['jumbo_p']        = $jumbo_p;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'View navbar docs &raquo;';
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/navbar/navbar',$data);
+            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/foot',$data);
+            
+        }
+        
+        public function navbar_fixed()
+        {
+            $jumbo_p = "This example is a quick exercise to illustrate how the"
+                    . " default, static navbar and fixed to top navbar work. It"
+                    . " includes the responsive CSS and HTML, so it also adapts"
+                    . " to your viewport and device.";
+            $jumbo_p .= "</p><p>";
+            $jumbo_p .= "To see the difference between static and fixed top"
+                    . " navbars, just scroll.";
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'navbar-fixed-top';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Fixed Top Navbar Example for Bootstrap";            
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
+            $data['navbar_nav']     = $this->navbar_nav;
+            $data['navbar_class_top']   = " navbar-fixed-top";
+            $data['container_class']   = "container";
+            $data['jumbo_p']        = $jumbo_p;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'View navbar docs &raquo;';
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/navbar/navbar',$data);
+            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/foot',$data);
+            
+        }       
 
 	public function cover()
 	{
@@ -265,6 +382,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Carousel Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
             
             $data['carousel']   = $carousel;
             $data['marketing']  = $marketing;
