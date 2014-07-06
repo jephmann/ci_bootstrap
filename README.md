@@ -108,6 +108,13 @@ Bootstrap: http://getbootstrap.com/examples/dashboard/
 ci_boostrap: ...templates/dashboard
 - no notes yet
 
+Sign-in page
+
+Bootstrap: http://getbootstrap.com/examples/signin/
+
+ci_boostrap: ...templates/signin
+- Added a provision for the form's action.
+
 "Experiments" -- yet to be built
 
 =====

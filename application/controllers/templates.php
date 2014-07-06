@@ -397,4 +397,19 @@
             $this->load->view('bootstrap/foot_docs',$data);
             
         }
+        
+        public function signin()
+        {
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'signin';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Signin Template for Bootstrap";
+            $data['action']         = '';
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/signin/signin',$data);
+            $this->load->view('bootstrap/foot',$data);
+        }
     }

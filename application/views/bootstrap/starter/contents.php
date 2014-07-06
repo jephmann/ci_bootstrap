@@ -23,7 +23,7 @@
             <a href="<?php echo site_url('templates/carousel') ?>">Carousel</a><br />
             <a href="<?php echo site_url('templates/blog') ?>">Blog</a><br />
             <a href="<?php echo site_url('templates/dashboard') ?>">Dashboard</a><br />
-            Sign-in page<br />
+            <a href="<?php echo site_url('templates/signin') ?>">Sign-in page</a><br />
             Justified nav<br />
             Sticky footer<br />
             Sticky footer with navbar<br />
