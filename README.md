@@ -42,6 +42,8 @@ ci_bootstrap: ...templates/starter
 - Unlike most of the other templates, this template was reapplied to at least
 one other page (controller method) in the project (Contents, About, Contact)
 
+=====
+
 #### Bootstrap Theme
 
 Bootstrap: http://getbootstrap.com/examples/theme/
@@ -49,12 +51,17 @@ Bootstrap: http://getbootstrap.com/examples/theme/
 ci_boostrap: Yet to be built
 - no notes yet
 
+=====
+
 #### Grids
+"Multiple examples of grid layouts with all four tiers, nesting, and more."
 
 Bootstrap: http://getbootstrap.com/examples/grid/
 
 ci_boostrap: ...templates/grids
 - no notes yet
+
+=====
 
 #### Jumbotron
 "Build around the jumbotron with a navbar and some basic grid columns."
@@ -64,6 +71,8 @@ Bootstrap: http://getbootstrap.com/examples/jumbotron/
 ci_boostrap: ...templates/jumbotron
 - no notes yet
 
+=====
+
 #### Narrow Jumbotron
 "Build a more custom page by narrowing the default container and jumbotron."
 
@@ -71,6 +80,8 @@ Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
 
 ci_boostrap: ...templates/jumbotronnarrow
 - no notes yet
+
+=====
 
 ### "Navbars in Action"
 - Whereas each of the other templates gets its own subdirectory under
@@ -85,6 +96,8 @@ Bootstrap: http://getbootstrap.com/examples/navbar/
 ci_boostrap: ...templates/navbar
 - no notes yet
 
+=====
+
 #### Static top navbar
 "Super basic template with a static top navbar along with some additional content."
 
@@ -92,6 +105,8 @@ Bootstrap: http://getbootstrap.com/examples/navbar-static-top/
 
 ci_boostrap: ...templates/navbar_static
 - no notes yet
+
+=====
 
 #### Fixed navbar
 "Super basic template with a fixed top navbar along with some additional content."
@@ -101,6 +116,7 @@ Bootstrap: http://getbootstrap.com/examples/navbar-fixed-top/
 ci_boostrap: ...templates/navbar_fixed
 - no notes yet
 
+=====
 
 ### "Custom Components"
 
@@ -113,7 +129,9 @@ ci_boostrap: ...templates/cover
 - Unlike most of the other templates, this template was reapplied to one other
 page (controller method) in the project: templates/index. In CodeIgniter I
 replaced "welcome" with "templates" as the project's default controller, thus
-making "templates/index" the project's home page. 
+making "templates/index" the project's home page.
+
+===== 
 
 #### Carousel
 "Customize the navbar and carousel, then add some new components."
@@ -128,6 +146,8 @@ properly due to web browser security rules."
 sample with three items. With count($array) I was also able to add a fourth
 "dot" of navigation.
 
+=====
+
 #### Blog
 "Simple two-column blog layout with custom navigation, header, and type."
 
@@ -140,6 +160,8 @@ deductive reasoning may inspire one. TinyMCE [http://www.tinymce.com/] ought to
 be a part of such a form, as the posts allow a variety of unformatted HTML
 tags.
 
+=====
+
 #### Dashboard
 "Basic structure for a admin dashboard with fixed sidebar and navbar."
 
@@ -148,6 +170,8 @@ Bootstrap: http://getbootstrap.com/examples/dashboard/
 ci_boostrap: ...templates/dashboard
 - no notes yet
 
+=====
+
 #### Sign-in page
 "Custom form layout and design for a simple sign in form."
 
@@ -155,6 +179,8 @@ Bootstrap: http://getbootstrap.com/examples/signin/
 
 ci_boostrap: ...templates/signin
 - Added a provision for the form's action.
+
+=====
 
 ### "Experiments" -- yet to be built
 
