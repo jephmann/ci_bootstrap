@@ -182,6 +182,17 @@ ci_boostrap: ...templates/signin
 
 =====
 
+#### Justified nav
+"Create a custom navbar with justified links. Heads up! Not too Safari
+friendly."
+
+Bootstrap: http://getbootstrap.com/examples/justified-nav/
+
+ci_boostrap: ...templates/justified_nav
+- no notes yet
+
+=====
+
 ### "Experiments" -- yet to be built
 
 =====

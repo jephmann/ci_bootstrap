@@ -9,13 +9,13 @@
     </ol>
     <div class="carousel-inner">
         <?php for($c=0; $c<count($carousel); $c++) : ?>
-        <div class="<?php echo $carousel[$c]['item_class'] ?>">
-            <img src="<?php echo $carousel[$c]['img_src'] ?>" alt="<?php echo $carousel[$c]['img_alt'] ?>">
+        <div class="<?php echo $carousel[$c]['item_class']; ?>">
+            <img src="<?php echo $carousel[$c]['img_src']; ?>" alt="<?php echo $carousel[$c]['img_alt']; ?>">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1><?php echo $carousel[$c]['h1'] ?></h1>
-                    <p><?php echo $carousel[$c]['p'] ?></p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php echo $carousel[$c]['href'] ?>" role="button"><?php echo $carousel[$c]['button'] ?></a></p>
+                    <h1><?php echo $carousel[$c]['h1']; ?></h1>
+                    <p><?php echo $carousel[$c]['p']; ?></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php echo $carousel[$c]['href']; ?>" role="button"><?php echo $carousel[$c]['button']; ?></a></p>
                 </div>
             </div>
         </div>

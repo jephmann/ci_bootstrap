@@ -4,13 +4,13 @@
         <?php for($p=0; $p<count($posts); $p++) : ?>
         <div class="blog-post">
             <h2 class="blog-post-title">
-                <?php echo $posts[$p]['title'] ?>
+                <?php echo $posts[$p]['title']; ?>
             </h2>
             <p class="blog-post-meta">
-                <?php echo $posts[$p]['date'] ?> by 
-                <a href="<?php echo $posts[$p]['href'] ?>"><?php echo $posts[$p]['author'] ?></a>
+                <?php echo $posts[$p]['date']; ?> by 
+                <a href="<?php echo $posts[$p]['href']; ?>"><?php echo $posts[$p]['author']; ?></a>
             </p>
-            <?php echo $posts[$p]['text'] ?>
+            <?php echo $posts[$p]['text']; ?>
         </div><!-- /.blog-post -->
         <?php endfor; ?>
         

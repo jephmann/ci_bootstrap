@@ -555,4 +555,23 @@
             $this->load->view('bootstrap/signin/signin',$data);
             $this->load->view('bootstrap/foot',$data);
         }
+        
+        public function justified_nav()
+        {
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'justified_nav';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Justified Nav Template for Bootstrap";           
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar; 
+        
+            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/justified_nav/masthead',$data);
+            $this->load->view('bootstrap/justified_nav/jumbotron',$data);
+            $this->load->view('bootstrap/justified_nav/row',$data);
+            $this->load->view('bootstrap/justified_nav/footer',$data);
+            $this->load->view('bootstrap/foot',$data);
+        }
     }
