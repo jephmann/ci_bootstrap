@@ -112,7 +112,32 @@
         }
         
         // public function theme(){}
-        // public function grids(){}
+        
+        public function grids()
+        {
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'grid';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Grid Template for Bootstrap";            
+            $data['h1']             = $data['title'];
+        
+            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/grid/header',$data);            
+            $this->load->view('bootstrap/grid/three_columns_equal');
+            $this->load->view('bootstrap/grid/three_columns_unequal');
+            $this->load->view('bootstrap/grid/two_columns');
+            $this->load->view('bootstrap/grid/single_column');
+            $this->load->view('bootstrap/grid/two-column_two-nested');
+            $this->load->view('bootstrap/grid/mixed_md');
+            $this->load->view('bootstrap/grid/mixed_mtd');
+            $this->load->view('bootstrap/grid/clearing');
+            $this->load->view('bootstrap/grid/resets');            
+            $this->load->view('bootstrap/foot',$data);
+
+        }
 
 	public function jumbotron()
 	{

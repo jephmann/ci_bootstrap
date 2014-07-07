@@ -38,5 +38,5 @@
                 <?php endfor; ?>
             </ul>
         </div><!--/.nav-collapse -->
-    </div><!--/.container-fluid -->
+    </div>
 </div>

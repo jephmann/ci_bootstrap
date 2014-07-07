@@ -7,7 +7,7 @@
         <p>
             <a href="<?php echo site_url('templates/starter') ?>">Starter template</a><br />
             Bootstrap theme<br />
-            Grids<br />
+            <a href="<?php echo site_url('templates/grids') ?>">Grids</a><br />
             <a href="<?php echo site_url('templates/jumbotron') ?>">Jumbotron</a><br />
             <a href="<?php echo site_url('templates/jumbotronnarrow') ?>">Narrow jumbotron</a><br />
         </p>

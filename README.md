@@ -53,7 +53,7 @@ ci_boostrap: Yet to be built
 
 Bootstrap: http://getbootstrap.com/examples/grid/
 
-ci_boostrap: Yet to be built
+ci_boostrap: ...templates/grids
 - no notes yet
 
 #### Jumbotron
