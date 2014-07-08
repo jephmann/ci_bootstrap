@@ -574,4 +574,57 @@
             $this->load->view('bootstrap/justified_nav/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
+        
+        public function sticky_footer()
+        {
+            $lead_p = 'Pin a fixed-height footer to the bottom of the viewport'
+                . ' in desktop browsers with this custom HTML and CSS.';
+            $next_p = 'Use <a href="'
+                . site_url('templates/sticky_footer_navbar/')
+                . '"\>the sticky footer with a fixed navbar</a> if need be, too.';
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'sticky-footer';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Sticky Footer Template for Bootstrap";           
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
+            $data['lead_p']         = $lead_p;
+            $data['next_p']         = $next_p;
+        
+            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/sticky_footer/header',$data);
+            $this->load->view('bootstrap/sticky_footer/footer',$data);
+            $this->load->view('bootstrap/foot',$data);
+        }
+        
+        public function sticky_footer_navbar()
+        {
+            $lead_p = 'Pin a fixed-height footer to the bottom of the viewport
+                in desktop browsers with this custom HTML and CSS. A fixed
+                navbar has been added with <code>padding-top: 60px;</code> on
+                the <code>body > .container</code>.</p>';
+            $next_p = 'Back to <a href="'
+                . site_url('templates/sticky_footer/')
+                . '"\>the default sticky footer</a> minus the navbar.';
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'sticky-footer-navbar';
+            $data['brand']          = CB_BRAND;
+            $data['title']          = "Sticky Footer Navbar Template for Bootstrap";           
+            $data['h1']             = $data['title'];
+            $data['navbar']         = $this->navbar;
+            $data['lead_p']         = $lead_p;
+            $data['next_p']         = $next_p;
+        
+            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/sticky_footer/navbar',$data);
+            $this->load->view('bootstrap/sticky_footer/header',$data);
+            $this->load->view('bootstrap/sticky_footer/footer',$data);
+            $this->load->view('bootstrap/foot',$data);
+        }
     }

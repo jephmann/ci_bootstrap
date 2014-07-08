@@ -193,6 +193,31 @@ ci_boostrap: ...templates/justified_nav
 
 =====
 
+#### Sticky footer
+"Attach a footer to the bottom of the viewport when the content is shorter than
+it."
+
+Bootstrap: http://getbootstrap.com/examples/sticky-footer/
+
+ci_boostrap: ...templates/sticky_footer
+- Whereas each of the other templates gets its own subdirectory under
+"...views/bootstrap/", these footer templates share files in the
+"...views/bootstrap/sticky_footer" subdirectory.
+
+=====
+
+#### Sticky footer with navbar
+"Attach a footer to the bottom of the viewport with a fixed navbar at the top."
+
+Bootstrap: http://getbootstrap.com/examples/sticky-footer-navbar/
+
+ci_boostrap: ...templates/sticky_footer_navbar
+- Whereas each of the other templates gets its own subdirectory under
+"...views/bootstrap/", these footer templates share files in the
+"...views/bootstrap/sticky_footer" subdirectory.
+
+=====
+
 ### "Experiments" -- yet to be built
 
 =====
