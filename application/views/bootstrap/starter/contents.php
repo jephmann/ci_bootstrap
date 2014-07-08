@@ -25,8 +25,8 @@
             <a href="<?php echo site_url('templates/dashboard'); ?>">Dashboard</a><br />
             <a href="<?php echo site_url('templates/signin'); ?>">Sign-in page</a><br />
             <a href="<?php echo site_url('templates/justified_nav'); ?>">Justified nav</a><br />
-            Sticky footer<br />
-            Sticky footer with navbar<br />
+            <a href="<?php echo site_url('templates/sticky_footer'); ?>">Sticky footer</a><br />
+            <a href="<?php echo site_url('templates/sticky_footer_navbar'); ?>">Sticky footer with navbar</a><br />
         </p>
         <h3>"Experiments"</h3>
         <p>
