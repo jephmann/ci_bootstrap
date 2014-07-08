@@ -242,6 +242,15 @@ templates, revised to include Controller variables
 
 =====
 
+## *TO DO*:
+
+- Further apply D*R*Y ("Don't Repeat Yourself") concepts to
+*application/views/bootstrap/* -- comb for areas of repetition; then revise
+*application/controllers/* (especially *templates.php* but maybe others)
+accordingly
+
+=====
+
 ## References:
 
 - http://getbootstrap.com/getting-started/
