@@ -14,6 +14,7 @@
         private $bootstrap_css;
         private $bootstrap_js;
         private $navbar;
+        private $navfoot;
 
         public function __construct() {
             parent::__construct();
@@ -37,6 +38,17 @@
                     'text' => 'Contact',
                 ),
             );
+            // footer navigation
+            $this->navfoot = array(
+                array(
+                    'href' => 'terms',
+                    'text' => 'Terms',
+                ),
+                array(
+                    'href' => 'privacy',
+                    'text' => 'Privacy',
+                ),
+            );
         }
 
         public function index()
@@ -45,23 +57,25 @@
              * Special for this demo, based on the starter template
              */
 
-            $lead_p = 'Bootstrap did not supply a Contact page.';
-            $lead_p .= ' However, its navagation often points to one.';
-            $lead_p .= ' So I created one based on the starter template.';
+            $lead = 'Bootstrap did not supply a Contact page.';
+            $lead .= ' However, its navagation often points to one.';
+            $lead .= ' So I created one based on the starter template.';
 
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "Contact";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Contact";
             $data['navbar']         = $this->navbar;
-            $data['lead_p']         = $lead_p;
+            $data['navfoot']        = $this->navfoot;
+            $data['lead']           = $lead;
 
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/starter/navbar',$data);
-            $this->load->view('bootstrap/starter/contact',$data);
+            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/starter',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
         }
 

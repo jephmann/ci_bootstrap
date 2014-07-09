@@ -1,12 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * Description of about
+ * Description of terms
  *
  * @author Jeffrey
  */
-
-    class About extends CI_Controller
-    {
+class Privacy extends CI_Controller
+{
         /*
          * Globals
          */
@@ -57,7 +56,7 @@
              * Special for this demo, based on the starter template
              */
 
-            $lead = 'Bootstrap did not supply an About page.';
+            $lead = 'Bootstrap did not supply a Privacy page.';
             $lead .= ' However, its navagation often points to one.';
             $lead .= ' So I created one based on the starter template.';
 
@@ -66,7 +65,7 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "About";
+            $data['title']          = "Privacy";
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['lead']           = $lead;

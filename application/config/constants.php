@@ -45,7 +45,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 |
 */
 
-define('CB_BRAND','CodeIgniter BootStrap'); // The name of this project
+define('CB_BRAND','CodeIgniter BootStrap'); // The name of this project <title> <h1>
+define('CB_AUTHOR','Jeffrey P. Hartmann');
+define('CB_COPYRIGHT', CB_BRAND . ' &copy; '. CB_AUTHOR . ' 2014-'.date('Y'));                   // Copyright <footer>
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

@@ -14,6 +14,7 @@
         private $bootstrap_css;
         private $bootstrap_js;
         private $navbar;
+        private $navfoot;
 
         public function __construct() {
             parent::__construct();
@@ -37,6 +38,17 @@
                     'text' => 'Contact',
                 ),
             );
+            // footer navigation
+            $this->navfoot = array(
+                array(
+                    'href' => 'terms',
+                    'text' => 'Terms',
+                ),
+                array(
+                    'href' => 'privacy',
+                    'text' => 'Privacy',
+                ),
+            );
         }
 
         public function index()
@@ -50,13 +62,15 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "Contents";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Contents";
             $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
 
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/starter/navbar',$data);
+            $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/starter/contents',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
         }
 

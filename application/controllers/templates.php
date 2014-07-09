@@ -13,6 +13,7 @@
         private $bootstrap_css;
         private $bootstrap_js;
         private $navbar;
+        private $navfoot;
         private $navbar_nav;
         
         public function __construct() {
@@ -38,6 +39,17 @@
                     'href' => 'contact',
                     'text' => 'Contact',
                     'p' => 'Contact stuff',
+                ),
+            );
+            // footer navigation
+            $this->navfoot = array(
+                array(
+                    'href' => 'terms',
+                    'text' => 'Terms',
+                ),
+                array(
+                    'href' => 'privacy',
+                    'text' => 'Privacy',
                 ),
             );
             
@@ -79,6 +91,7 @@
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = site_url('contents');
             $data['btn_text']       = 'Contents';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/cover/masthead',$data);
@@ -90,23 +103,26 @@
         public function starter()
         {
             
-            $lead_p = 'Use this document as a way to quickly start any new project.';
-            $lead_p .= '<br />';
-            $lead_p .= 'All you get is this text and a mostly barebones HTML document.';
+            $lead = 'Use this document as a way to quickly start any new project.';
+            $lead .= '<br />';
+            $lead .= 'All you get is this text and a mostly barebones HTML document.';
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "Starter Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Starter Template for Bootstrap";
             $data['navbar']         = $this->navbar;
-            $data['lead_p']         = $lead_p;
+            $data['navfoot']        = $this->navfoot;
+            $data['lead']           = $lead;
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/starter/navbar',$data);
-            $this->load->view('bootstrap/starter/starter',$data);
+            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/starter',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }
@@ -123,6 +139,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Grid Template for Bootstrap";            
             $data['h1']             = $data['title'];
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/grid/header',$data);            
@@ -150,16 +167,21 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "Jumbotron Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Jumbotron Template for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
             $data['jumbo_p']        = $jumbo_p;
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
+            
             $this->load->view('bootstrap/jumbotron/navbar',$data);
             $this->load->view('bootstrap/jumbotron/jumbotron',$data);
-            $this->load->view('bootstrap/jumbotron/row',$data);
-            $this->load->view('bootstrap/jumbotron/footer',$data);
+            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/jumbotron/row',$data);            
+            $this->load->view('bootstrap/hr');
+            $this->load->view('bootstrap/footer',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
 
 	}
@@ -174,17 +196,22 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron-narrow';
             $data['brand']          = CB_BRAND;
-            $data['title']          = "Narrow Jumbotron Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Narrow Jumbotron Template for Bootstrap";  
             $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
             $data['lead_p']         = $lead_p;
+            $data['copyright']      = CB_COPYRIGHT;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'Sign up today';
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/jumbotron-narrow/nav',$data);
-            $this->load->view('bootstrap/jumbotron-narrow/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/jumbotron-narrow/marketing',$data);
-            $this->load->view('bootstrap/jumbotron-narrow/footer',$data);
-            $this->load->view('bootstrap/jumbotron-narrow/foot',$data);
+            $this->load->view('bootstrap/footer',$data);
+            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/foot_empty',$data);
             
         }
         
@@ -209,11 +236,13 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/navbar/navbar',$data);
             $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }
@@ -242,11 +271,13 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }
@@ -275,11 +306,13 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }       
@@ -301,6 +334,7 @@
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'Learn more';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/cover/masthead',$data);
@@ -408,6 +442,8 @@
             $data['title']          = "Carousel Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
+            $data['copyright']      = CB_COPYRIGHT;
             
             $data['carousel']   = $carousel;
             $data['marketing']  = $marketing;
@@ -418,7 +454,8 @@
             $this->load->view('bootstrap/carousel/carousel',$data);
             $this->load->view('bootstrap/carousel/marketing',$data);
             $this->load->view('bootstrap/carousel/featurette',$data);
-            $this->load->view('bootstrap/carousel/footer',$data);
+            $this->load->view('bootstrap/footer',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot_docs',$data); 
         }
         
@@ -475,6 +512,7 @@
             $data['navbar']         = $this->navbar; 
             $data['lead_p']         = $lead_p;
             $data['posts']          = $posts;
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);        
             $this->load->view('bootstrap/blog/masthead',$data);        
@@ -528,6 +566,7 @@
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar; 
             $data['h2']             = "Table Section";
+            $data['copyright']      = CB_COPYRIGHT;
             
             $data['dashboard']  = $dashboard;
             $data['thead']      = $thead;
@@ -550,6 +589,7 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Signin Template for Bootstrap";
             $data['action']         = '';
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/signin/signin',$data);
@@ -558,6 +598,9 @@
         
         public function justified_nav()
         {
+            $lead_p = "Cras justo odio, dapibus ac facilisis in, egestas eget quam.";
+            $lead_p .= "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.";
+            
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
@@ -565,13 +608,20 @@
             $data['brand']          = CB_BRAND;
             $data['title']          = "Justified Nav Template for Bootstrap";           
             $data['h1']             = $data['title'];
-            $data['navbar']         = $this->navbar; 
+            $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
+            $data['lead_p']         = $lead_p;
+            $data['btn_href']       = '#';
+            $data['btn_text']       = 'Get started today';
+            $data['copyright']      = CB_COPYRIGHT;
         
-            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/container_open');            
             $this->load->view('bootstrap/justified_nav/masthead',$data);
-            $this->load->view('bootstrap/justified_nav/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/justified_nav/row',$data);
-            $this->load->view('bootstrap/justified_nav/footer',$data);
+            $this->load->view('bootstrap/footer',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
         }
         
@@ -593,6 +643,7 @@
             $data['navbar']         = $this->navbar;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/sticky_footer/header',$data);
@@ -620,6 +671,7 @@
             $data['navbar']         = $this->navbar;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
+            $data['copyright']      = CB_COPYRIGHT;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/sticky_footer/navbar',$data);

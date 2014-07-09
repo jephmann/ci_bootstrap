@@ -1,6 +1,5 @@
 <div class="row">
-    <div class="col-sm-8 blog-main">
-        
+    <div class="col-sm-8 blog-main">        
         <?php for($p=0; $p<count($posts); $p++) : ?>
         <div class="blog-post">
             <h2 class="blog-post-title">
@@ -12,8 +11,7 @@
             </p>
             <?php echo $posts[$p]['text']; ?>
         </div><!-- /.blog-post -->
-        <?php endfor; ?>
-        
+        <?php endfor; ?>        
         <ul class="pager">
             <li><a href="#">Previous</a></li>
             <li><a href="#">Next</a></li>

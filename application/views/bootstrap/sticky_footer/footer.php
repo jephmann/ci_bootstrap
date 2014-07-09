@@ -1,5 +1,13 @@
 <div class="footer">
     <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">
+            <?php echo $copyright; ?>
+            <?php for($nf=0; $nf<count($navfoot); $nf++) : ?>
+            &middot;
+            <a href="<?php echo site_url($navfoot[$nf]['href']); ?>">
+                <?php echo $navfoot[$nf]['text'] ?>
+            </a>
+            <?php endfor; ?>
+        </p>
     </div>
 </div>
