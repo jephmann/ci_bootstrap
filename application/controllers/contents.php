@@ -5,52 +5,8 @@
  * @author Jeffrey
  */
 
-    class Contents extends CI_Controller
+    class Contents extends MY_Controller
     {
-        /*
-         * Globals
-         */
-        private $bootstrap;
-        private $bootstrap_css;
-        private $bootstrap_js;
-        private $navbar;
-        private $navfoot;
-
-        public function __construct() {
-            parent::__construct();
-
-            $this->bootstrap        = base_url().'bootstrap/';  // path to Bootstrap assets
-            $this->bootstrap_css    = $this->bootstrap.'css/';  // path to Bootstrap *.css
-            $this->bootstrap_js     = $this->bootstrap.'js/';   // path to Bootstrap *.js
-
-            // common navigation
-            $this->navbar = array(
-                array(
-                    'href' => 'contents',
-                    'text' => 'Contents',
-                ),
-                array(
-                    'href' => 'about',
-                    'text' => 'About',
-                ),
-                array(
-                    'href' => 'contact',
-                    'text' => 'Contact',
-                ),
-            );
-            // footer navigation
-            $this->navfoot = array(
-                array(
-                    'href' => 'terms',
-                    'text' => 'Terms',
-                ),
-                array(
-                    'href' => 'privacy',
-                    'text' => 'Privacy',
-                ),
-            );
-        }
-
         public function index()
         {
             /*

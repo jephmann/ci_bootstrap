@@ -4,54 +4,15 @@
  *
  * @author Jeffrey
  */
-    class Templates extends CI_Controller
+    class Templates extends MY_Controller
     {
         /*
          * Globals
          */
-        private $bootstrap;
-        private $bootstrap_css;
-        private $bootstrap_js;
-        private $navbar;
-        private $navfoot;
         private $navbar_nav;
         
         public function __construct() {
             parent::__construct();
-            
-            $this->bootstrap        = base_url().'bootstrap/';  // path to Bootstrap assets
-            $this->bootstrap_css    = $this->bootstrap.'css/';  // path to Bootstrap *.css
-            $this->bootstrap_js     = $this->bootstrap.'js/';   // path to Bootstrap *.js
-            
-            // common navigation
-            $this->navbar = array(
-                array(
-                    'href' => 'contents',
-                    'text' => 'Contents',
-                    'p' => 'Contents stuff',
-                ),
-                array(
-                    'href' => 'about',
-                    'text' => 'About',
-                    'p' => 'About stuff',
-                ),
-                array(
-                    'href' => 'contact',
-                    'text' => 'Contact',
-                    'p' => 'Contact stuff',
-                ),
-            );
-            // footer navigation
-            $this->navfoot = array(
-                array(
-                    'href' => 'terms',
-                    'text' => 'Terms',
-                ),
-                array(
-                    'href' => 'privacy',
-                    'text' => 'Privacy',
-                ),
-            );
             
             // navbar navigation (for the navbar templates)
             $this->navbar_nav = array(
@@ -641,6 +602,7 @@
             $data['title']          = "Sticky Footer Template for Bootstrap";           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
             $data['copyright']      = CB_COPYRIGHT;
