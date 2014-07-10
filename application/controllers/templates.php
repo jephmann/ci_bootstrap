@@ -45,14 +45,14 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Home";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = site_url('contents');
             $data['btn_text']       = 'Contents';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/cover/masthead',$data);
@@ -72,12 +72,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Starter Template for Bootstrap";
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['lead']           = $lead;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/starter/navbar',$data);
@@ -97,10 +97,10 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'grid';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Grid Template for Bootstrap";            
             $data['h1']             = $data['title'];
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/grid/header',$data);            
@@ -127,12 +127,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Jumbotron Template for Bootstrap";
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['jumbo_p']        = $jumbo_p;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             
@@ -156,12 +156,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron-narrow';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Narrow Jumbotron Template for Bootstrap";  
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['lead_p']         = $lead_p;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'Sign up today';
         
@@ -187,7 +187,7 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Navbar Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
@@ -197,7 +197,7 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/container_open');
@@ -222,7 +222,7 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar-static-top';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Static Top Navbar Example for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
@@ -232,7 +232,7 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/navbar',$data);
@@ -257,7 +257,7 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar-fixed-top';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Fixed Top Navbar Example for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
@@ -267,7 +267,7 @@
             $data['jumbo_p']        = $jumbo_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'View navbar docs &raquo;';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/navbar',$data);
@@ -288,14 +288,14 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Cover Template for Bootstrap";
             $data['navbar']         = $this->navbar; 
             $data['h1']             = $data['title'];            
             $data['inner_p']        = $inner_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'Learn more';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/cover/masthead',$data);
@@ -399,12 +399,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'carousel';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Carousel Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
             
             $data['carousel']   = $carousel;
             $data['marketing']  = $marketing;
@@ -467,13 +467,13 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'blog';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Blog Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar; 
             $data['lead_p']         = $lead_p;
             $data['posts']          = $posts;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);        
             $this->load->view('bootstrap/blog/masthead',$data);        
@@ -522,12 +522,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'dashboard';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Dashboard Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar; 
             $data['h2']             = "Table Section";
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
             
             $data['dashboard']  = $dashboard;
             $data['thead']      = $thead;
@@ -547,10 +547,10 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'signin';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Signin Template for Bootstrap";
             $data['action']         = '';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/signin/signin',$data);
@@ -566,7 +566,7 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'justified_nav';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Justified Nav Template for Bootstrap";           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
@@ -574,7 +574,7 @@
             $data['lead_p']         = $lead_p;
             $data['btn_href']       = '#';
             $data['btn_text']       = 'Get started today';
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/container_open');            
@@ -598,14 +598,14 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'sticky-footer';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Sticky Footer Template for Bootstrap";           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/sticky_footer/header',$data);
@@ -627,13 +627,13 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'sticky-footer-navbar';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Sticky Footer Navbar Template for Bootstrap";           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
-            $data['copyright']      = CB_COPYRIGHT;
+            $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);            
             $this->load->view('bootstrap/sticky_footer/navbar',$data);

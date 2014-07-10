@@ -21,11 +21,12 @@
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'starter-template';
-            $data['brand']          = CB_BRAND;
+            $data['brand']          = $this->brand;
             $data['title']          = "Privacy";
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['lead']           = $lead;
+            $data['copyright']      = $this->copyright;
 
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/starter/navbar',$data);

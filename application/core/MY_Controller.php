@@ -14,6 +14,9 @@
         public $bootstrap_js;
         public $navbar;
         public $navfoot;
+        public $author;
+        public $brand;
+        public $copyright;
         
         public function __construct() {
             parent::__construct();
@@ -48,5 +51,9 @@
                     'text' => 'Privacy',
                 ),
             );
+            
+            $this->author = CB_AUTHOR;
+            $this->brand = CB_BRAND;
+            $this->copyright = CB_COPYRIGHT;
         }
     }
