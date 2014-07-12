@@ -48,7 +48,7 @@ one other page (controller method) in the project (Contents, About, Contact)
 
 Bootstrap: http://getbootstrap.com/examples/theme/
 
-ci_boostrap: Yet to be built
+ci_bootstrap: ...templates/theme
 - no notes yet
 
 =====

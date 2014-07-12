@@ -88,7 +88,67 @@
             
         }
         
-        // public function theme(){}
+        public function theme()
+        {
+            $btn_text = array(
+                'Default',
+                'Primary',
+                'Success',
+                'Info',
+                'Warning',
+                'Danger',
+                'Link',
+            );
+            $btn_size = array(
+                'lg',
+                NULL,
+                'sm',
+                'xs',
+            );
+            
+            $data['bootstrap']      = $this->bootstrap;
+            $data['bootstrap_css']  = $this->bootstrap_css;
+            $data['bootstrap_js']   = $this->bootstrap_js;
+            $data['custom_css']     = 'theme';
+            $data['brand']          = $this->brand;
+            $data['title']          = "Theme Template for Bootstrap";
+            $data['navbar']         = $this->navbar;
+            $data['navfoot']        = $this->navfoot;
+            $data['btn_size']       = $btn_size;
+            $data['btn_text']       = $btn_text;
+            $data['table_th']       = $this->table_th;
+            $data['labels']         = $this->labels;
+            $data['navs']           = $this->navs;
+            $data['nav_class']      = $this->nav_class;
+            $data['navs']           = $this->navbars;
+            $data['navbar_class']      = $this->navbar_class;
+            $data['navbar_dropdown']      = $this->navbar_dropdown;
+        
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/theme_navbar',$data);
+            $this->load->view('bootstrap/theme/container_theme_open',$data);
+            $this->load->view('bootstrap/theme/jumbotron',$data);
+            $this->load->view('bootstrap/theme/intro_buttons',$data);
+            $this->load->view('bootstrap/theme/buttons',$data);
+            $this->load->view('bootstrap/theme/intro_tables',$data);
+            $this->load->view('bootstrap/theme/tables',$data);
+            $this->load->view('bootstrap/theme/intro_thumbnails',$data);
+            $this->load->view('bootstrap/theme/thumbnails',$data);
+            $this->load->view('bootstrap/theme/intro_labels',$data);
+            $this->load->view('bootstrap/theme/labels',$data);
+            $this->load->view('bootstrap/theme/intro_badges',$data);
+            $this->load->view('bootstrap/theme/badges',$data);
+            $this->load->view('bootstrap/theme/intro_dropdown_menus',$data);
+            $this->load->view('bootstrap/theme/dropdown_menus',$data);
+            $this->load->view('bootstrap/theme/intro_navs',$data);
+            $this->load->view('bootstrap/theme/navs',$data);
+            $this->load->view('bootstrap/theme/intro_navbars',$data);
+            $this->load->view('bootstrap/theme/navbars',$data);
+            $this->load->view('bootstrap/theme/theme',$data);
+            $this->load->view('bootstrap/theme/container_theme_close',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
+
+        }
         
         public function grids()
         {
@@ -192,6 +252,14 @@
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['navbar_nav']     = $this->navbar_nav;
+            
+            $data['navs']           = $this->navs;
+            $data['nav_class']      = $this->nav_class;
+            $data['navs']           = $this->navbars;
+            $data['navbar_class']      = $this->navbar_class;
+            $data['navbar_dropdown']      = $this->navbar_dropdown;
+            
+            
             $data['navbar_class_top']   = NULL;
             $data['container_class']   = "container-fluid";
             $data['jumbo_p']        = $jumbo_p;
