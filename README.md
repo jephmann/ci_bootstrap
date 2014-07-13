@@ -84,85 +84,69 @@ thus I withheld it from GitHub
 #### Starter Template
 "Nothing but the basics: compiled CSS and JavaScript along with a container."
 
-Bootstrap: http://getbootstrap.com/examples/starter-template/
-
-ci_bootstrap: ...templates/starter
-- Unlike most of the other templates, this template was reapplied to at least
-one other page (controller method) in the project (Contents, About, Contact)
+- Bootstrap: http://getbootstrap.com/examples/starter-template/
+- ci_bootstrap: ...templates/starter
 
 =====
 
 #### Bootstrap Theme
+"Load the optional Bootstrap theme for a visually enhanced experience."
 
-Bootstrap: http://getbootstrap.com/examples/theme/
-
-ci_bootstrap: ...templates/theme
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/theme/
+- ci_bootstrap: ...templates/theme
 
 =====
 
 #### Grids
 "Multiple examples of grid layouts with all four tiers, nesting, and more."
 
-Bootstrap: http://getbootstrap.com/examples/grid/
-
-ci_boostrap: ...templates/grids
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/grid/
+- ci_boostrap: ...templates/grids
 
 =====
 
 #### Jumbotron
 "Build around the jumbotron with a navbar and some basic grid columns."
 
-Bootstrap: http://getbootstrap.com/examples/jumbotron/
-
-ci_boostrap: ...templates/jumbotron
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/jumbotron/
+- ci_boostrap: ...templates/jumbotron
 
 =====
 
 #### Narrow Jumbotron
 "Build a more custom page by narrowing the default container and jumbotron."
 
-Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
-
-ci_boostrap: ...templates/jumbotronnarrow
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/jumbotron-narrow/
+- ci_boostrap: ...templates/jumbotronnarrow
 
 =====
 
 ### "Navbars in Action"
-- Whereas each of the other templates gets its own subdirectory under
-"...views/bootstrap/", these navbar templates share files in the
-"...views/bootstrap/navbar" subdirectory.
 
 #### Navbar
-"Super basic template that includes the navbar along with some additional content."
+"Super basic template that includes the navbar along with some additional
+content."
 
-Bootstrap: http://getbootstrap.com/examples/navbar/
-
-ci_boostrap: ...templates/navbar
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/navbar/
+- ci_boostrap: ...templates/navbar
 
 =====
 
 #### Static top navbar
-"Super basic template with a static top navbar along with some additional content."
+"Super basic template with a static top navbar along with some additional
+content."
 
-Bootstrap: http://getbootstrap.com/examples/navbar-static-top/
-
-ci_boostrap: ...templates/navbar_static
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/navbar-static-top/
+- ci_boostrap: ...templates/navbar_static
 
 =====
 
 #### Fixed navbar
-"Super basic template with a fixed top navbar along with some additional content."
+"Super basic template with a fixed top navbar along with some additional
+content."
 
-Bootstrap: http://getbootstrap.com/examples/navbar-fixed-top/
-
-ci_boostrap: ...templates/navbar_fixed
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/navbar-fixed-top/
+- ci_boostrap: ...templates/navbar_fixed
 
 =====
 
@@ -171,42 +155,28 @@ ci_boostrap: ...templates/navbar_fixed
 #### Cover
 "A one-page template for building simple and beautiful home pages."
 
-Bootstrap: http://getbootstrap.com/examples/cover/
-
-ci_boostrap: ...templates/cover
-- Unlike most of the other templates, this template was reapplied to one other
-page (controller method) in the project: templates/index. In CodeIgniter I
-replaced "welcome" with "templates" as the project's default controller, thus
-making "templates/index" the project's home page.
+- Bootstrap: http://getbootstrap.com/examples/cover/
+- ci_boostrap: ...templates/cover
 
 ===== 
 
 #### Carousel
 "Customize the navbar and carousel, then add some new components."
 
-Bootstrap: http://getbootstrap.com/examples/carousel/
+- Bootstrap: http://getbootstrap.com/examples/carousel/
+- ci_boostrap: ...templates/carousel
 
-ci_boostrap: ...templates/carousel
-- Per their sample: "If you're viewing this page via a file:// URL, the "next"
+Per their sample: "If you're viewing this page via a file:// URL, the "next"
 and "previous" Glyphicon buttons on the left and right might not load/display
 properly due to web browser security rules."
-- My array of data for the carousel includes a fourth item, unlike the original
-sample with three items. With count($array) I was also able to add a fourth
-"dot" of navigation.
 
 =====
 
 #### Blog
 "Simple two-column blog layout with custom navigation, header, and type."
 
-Bootstrap: http://getbootstrap.com/examples/blog/
-
-ci_boostrap: ...templates/blog
-- no notes yet
-- Bootstrap should have also included a blog entry form. I suppose that my
-deductive reasoning may inspire one. TinyMCE [http://www.tinymce.com/] ought to
-be a part of such a form, as the posts allow a variety of unformatted HTML
-tags.
+- Bootstrap: http://getbootstrap.com/examples/blog/
+- ci_boostrap: ...templates/blog
 
 =====
 
@@ -223,10 +193,8 @@ ci_boostrap: ...templates/dashboard
 #### Sign-in page
 "Custom form layout and design for a simple sign in form."
 
-Bootstrap: http://getbootstrap.com/examples/signin/
-
-ci_boostrap: ...templates/signin
-- Added a provision for the form's action.
+- Bootstrap: http://getbootstrap.com/examples/signin/
+- ci_boostrap: ...templates/signin
 
 =====
 
@@ -234,10 +202,8 @@ ci_boostrap: ...templates/signin
 "Create a custom navbar with justified links. Heads up! Not too Safari
 friendly."
 
-Bootstrap: http://getbootstrap.com/examples/justified-nav/
-
-ci_boostrap: ...templates/justified_nav
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/justified-nav/
+- ci_boostrap: ...templates/justified_nav
 
 =====
 
@@ -245,24 +211,16 @@ ci_boostrap: ...templates/justified_nav
 "Attach a footer to the bottom of the viewport when the content is shorter than
 it."
 
-Bootstrap: http://getbootstrap.com/examples/sticky-footer/
-
-ci_boostrap: ...templates/sticky_footer
-- Whereas each of the other templates gets its own subdirectory under
-"...views/bootstrap/", these footer templates share files in the
-"...views/bootstrap/sticky_footer" subdirectory.
+- Bootstrap: http://getbootstrap.com/examples/sticky-footer/
+- ci_boostrap: ...templates/sticky_footer
 
 =====
 
 #### Sticky footer with navbar
 "Attach a footer to the bottom of the viewport with a fixed navbar at the top."
 
-Bootstrap: http://getbootstrap.com/examples/sticky-footer-navbar/
-
-ci_boostrap: ...templates/sticky_footer_navbar
-- Whereas each of the other templates gets its own subdirectory under
-"...views/bootstrap/", these footer templates share files in the
-"...views/bootstrap/sticky_footer" subdirectory.
+- Bootstrap: http://getbootstrap.com/examples/sticky-footer-navbar/
+- ci_boostrap: ...templates/sticky_footer_navbar
 
 =====
 
