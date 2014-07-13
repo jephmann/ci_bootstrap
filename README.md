@@ -183,10 +183,8 @@ properly due to web browser security rules."
 #### Dashboard
 "Basic structure for a admin dashboard with fixed sidebar and navbar."
 
-Bootstrap: http://getbootstrap.com/examples/dashboard/
-
-ci_boostrap: ...templates/dashboard
-- no notes yet
+- Bootstrap: http://getbootstrap.com/examples/dashboard/
+- ci_boostrap: ...templates/dashboard
 
 =====
 
