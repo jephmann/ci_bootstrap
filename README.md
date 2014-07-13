@@ -34,6 +34,37 @@ in MVC), *core* and *views* (the "V" in MVC) directories within the
 
 =====
 
+#### What I have done to CodeIgniter to accommodate Bootstrap
+In the root (ci_bootstrap) directory:
+- Created this README file
+- Created an *assets* directory, where *.css files, *.js files, image files and the
+like are traditionally accessed in CodeIgniter
+- Created a *bootstrap* directory, into which I copied Bootstrap's assets;
+copied additional *.css and *.js files from Bootstrap (obtained via browser "View Source"
+into the *css* and *js* subdirectories (respectively).
+In *application*, which comes with CodeIgniter:
+- In *config":
+-- In *autoload.php*, autoloaded 'url' and 'file' helpers across the project
+-- In *config.php*, established 'CIBS_' as the subclass prefix
+-- In *constants.php*, added constant variables special to this project, which
+would be applied throughout the project
+-- In *routes.php*, changed the default controller from 'welcome' to 'templates'
+- In *controllers*:
+-- Added several controller classes (including 'templates.php')
+- In *core*:
+-- Added CIBS_Controller subclass, which extends CI_Controller and which in turn
+would be exteneded in other controllers
+- In *views*:
+-- Created *bootstrap* directory; which contain Bootstrap's HTML fragments
+(obtained via browser "View Source") readapted to include PHP logic (e.g. loops)
+and PHP variables populated via controllers
+The *system* and *user_guide* directories which come with CodeIgniter were
+untouched. The *user_guide* is non-essential to CodeIgniter functionality and
+thus I withheld it from GitHub
+
+
+=====
+
 ## *Compare:*
 
 ### "Using the Framework"
@@ -230,20 +261,16 @@ ci_boostrap: ...templates/sticky_footer_navbar
 ## *Additional pages*
 
 - The "home" page, based on the Cover template
-- A "contents" page, based on the Starter template
-- An "about" page, based on the Starter template
-- A "contact" page, based on the Starter template
+- A "contents" page, based on the Starter template (replaces "Home" in top
+navigation)
+- An "about" page (suggested by top navigation), based on the Starter template
+- A "contact" page (suggested by top navigation), based on the Starter template
+- A "privacy" page (suggested by footer navigation), based on the Starter
+template
+- A "terms" page (suggested by footer navigation), based on the Starter template
 
 Suggested additional pages:
 - At least one data entry form for the blog
-
-=====
-
-## *CodeIgniter accommodations for Bootstrap:*
-
-- ci_bootstrap/bootstrap -- the "assets" directory from Bootstrap
-- ci_bootstrap/application/views/bootstrap -- "deconstructed" bootstrap
-templates, revised to include Controller variables
 
 =====
 
@@ -259,5 +286,8 @@ accordingly
 ## References:
 
 - http://getbootstrap.com/getting-started/
-- http://ellislab.com/codeigniter
-- http://www.php.net/ 
+- http://ellislab.com/codeigniter (FYI, comments in CodeIgniter's code should
+have been updated from 'codeigniter.com' to reflect 'ellislab.com/codeigniter')
+- http://www.php.net/
+
+===== 
