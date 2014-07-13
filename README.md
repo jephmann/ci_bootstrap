@@ -63,10 +63,10 @@ would be exteneded in other controllers
 -- Created *bootstrap* directory; which contain Bootstrap's HTML fragments
 (obtained via browser "View Source") readapted to include PHP logic (e.g. loops)
 and PHP variables populated via controllers
+
 The *system* and *user_guide* directories which come with CodeIgniter were
 untouched. The *user_guide* is non-essential to CodeIgniter functionality and
 thus I withheld it from GitHub
-
 
 =====
 
