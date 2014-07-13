@@ -5,7 +5,7 @@
  * @author Jeffrey
  */
 
-    class Terms extends MY_Controller
+    class Terms extends CIBS_Controller
     {
         public function index()
         {

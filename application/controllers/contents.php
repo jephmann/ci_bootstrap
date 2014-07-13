@@ -5,7 +5,7 @@
  * @author Jeffrey
  */
 
-    class Contents extends MY_Controller
+    class Contents extends CIBS_Controller
     {
         public function index()
         {

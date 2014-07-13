@@ -5,7 +5,7 @@
  * @author Jeffrey
  */
 
-    class Contact extends MY_Controller
+    class Contact extends CIBS_Controller
     {
         public function index()
         {

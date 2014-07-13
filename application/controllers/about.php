@@ -5,7 +5,7 @@
  * @author Jeffrey
  */
 
-    class About extends MY_Controller
+    class About extends CIBS_Controller
     {
         public function index()
         {

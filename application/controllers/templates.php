@@ -4,7 +4,7 @@
  *
  * @author Jeffrey
  */
-    class Templates extends MY_Controller
+    class Templates extends CIBS_Controller
     {
         /*
          * Globals

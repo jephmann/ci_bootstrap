@@ -5,7 +5,7 @@
  * @author Jeffrey
  */
 
-    class Privacy extends MY_Controller
+    class Privacy extends CIBS_Controller
     {
         public function index()
         {
