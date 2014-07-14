@@ -62,8 +62,7 @@
         }
         
         public function starter()
-        {
-            
+        {            
             $lead = 'Use this document as a way to quickly start any new project.';
             $lead .= '<br />';
             $lead .= 'All you get is this text and a mostly barebones HTML document.';
@@ -75,17 +74,24 @@
             $data['brand']          = $this->brand;
             $data['title']          = "Starter Template for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $this->starter_navbardiv;
             $data['navfoot']        = $this->navfoot;
             $data['lead']           = $lead;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/starter/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/starter',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
-            
         }
         
         public function theme()
@@ -132,9 +138,17 @@
             $data['panels']             = $this->panels;
             $data['well_text']          = $this->well_text;
             $data['carousel']           = $this->carousel;
+            $data['carousel_id']        = $this->carousel_id;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/page/navbar_open_nav');
+            $this->load->view('bootstrap/theme/page/navbar_open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/theme/page/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/theme/page/container_open',$data);
             $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/theme/intro/buttons',$data);
@@ -152,7 +166,22 @@
             $this->load->view('bootstrap/theme/intro/navs',$data);
             $this->load->view('bootstrap/theme/navs',$data);
             $this->load->view('bootstrap/theme/intro/navbars',$data);
-            $this->load->view('bootstrap/theme/navbars',$data);
+            $this->load->view('bootstrap/theme/page/navbar_open_nav_0');
+            $this->load->view('bootstrap/theme/page/navbar_open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
+            $this->load->view('bootstrap/theme/navbars_0',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/page/navbar_open_nav_1');
+            $this->load->view('bootstrap/theme/page/navbar_open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
+            $this->load->view('bootstrap/theme/navbars_1',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/theme/intro/alerts',$data);
             $this->load->view('bootstrap/theme/alerts',$data);
             $this->load->view('bootstrap/theme/intro/progress_bars',$data);
@@ -203,6 +232,13 @@
             $jumbo_p .= ' It includes a large callout called a jumbotron and three supporting pieces of content.';
             $jumbo_p .= ' Use it as a starting point to create something more unique.';
             
+            $navbardiv = array(
+                'subclass'  => 'inverse',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
+            
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
@@ -210,13 +246,20 @@
             $data['brand']          = $this->brand;
             $data['title']          = "Jumbotron Template for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
             $data['navfoot']        = $this->navfoot;
             $data['jumbo_p']        = $jumbo_p;
             $data['copyright']      = $this->copyright;
         
-            $this->load->view('bootstrap/head',$data);
-            
+            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/jumbotron/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/jumbotron/jumbotron',$data);
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/jumbotron/row',$data);            
@@ -258,19 +301,32 @@
         
         public function navbar()
         {
-            $jumbo_p = "This example is a quick exercise to illustrate how the"
+            // sample jumbotron
+            $jumbotron = array(
+                'headline'  => "Navbar Template for Bootstrap",
+                'text'      => "This example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
-                    . " to your viewport and device.";
+                    . " to your viewport and device.",
+                'btn_href'  => "#",
+                'btn_text'  => "View navbar docs",
+            );
+            
+            $navbardiv = array(
+                'subclass'  => 'default',
+                'top'       => NULL,
+                'role'      => 'navigation',
+                'fluid'     => TRUE,
+            );
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar';
             $data['brand']          = $this->brand;
-            $data['title']          = "Navbar Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Navbar Template for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
             $data['navbar_nav']     = $this->navbar_nav;
             
             $data['navs']           = $this->navs;
@@ -279,18 +335,20 @@
             $data['navbar_class']      = $this->navbar_class;
             $data['navbar_dropdown']      = $this->navbar_dropdown;
             
-            
-            $data['navbar_class_top']   = NULL;
-            $data['container_class']   = "container-fluid";
-            $data['jumbo_p']        = $jumbo_p;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'View navbar docs &raquo;';
             $data['copyright']      = $this->copyright;
+            $data['jumbotron']      = $jumbotron;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
@@ -298,34 +356,51 @@
         
         public function navbar_static()
         {
-            $jumbo_p = "This example is a quick exercise to illustrate how the"
+            // sample jumbotron
+            $jumbotron = array(
+                'headline'  => "Static Top Navbar Example for Bootstrap",
+                'text'      => "This example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
-                    . " to your viewport and device.";
-            $jumbo_p .= "</p><p>";
-            $jumbo_p .= "To see the difference between static and fixed top"
-                    . " navbars, just scroll.";
+                    . " to your viewport and device."
+                    . "</p><p>"
+                    . "To see the difference between static and fixed top"
+                    . " navbars, just scroll.",
+                'btn_href'  => "#",
+                'btn_text'  => "View navbar docs",
+            );
+            
+            $navbardiv = array(
+                'subclass'  => 'default',
+                'top'       => 'static',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar-static-top';
             $data['brand']          = $this->brand;
-            $data['title']          = "Static Top Navbar Example for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Static Top Navbar Example for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
             $data['navbar_nav']     = $this->navbar_nav;
-            $data['navbar_class_top']   = " navbar-static-top";
-            $data['container_class']   = "container";
-            $data['jumbo_p']        = $jumbo_p;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'View navbar docs &raquo;';
+            $data['navbar_class']   = $this->navbar_class;
             $data['copyright']      = $this->copyright;
+            $data['jumbotron']      = $jumbotron;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/container_open');
-            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
@@ -333,34 +408,51 @@
         
         public function navbar_fixed()
         {
-            $jumbo_p = "This example is a quick exercise to illustrate how the"
+            // sample jumbotron
+            $jumbotron = array(
+                'headline'  => "Fixed Top Navbar Example for Bootstrap",
+                'text'      => "Tis example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
-                    . " to your viewport and device.";
-            $jumbo_p .= "</p><p>";
-            $jumbo_p .= "To see the difference between static and fixed top"
-                    . " navbars, just scroll.";
+                    . " to your viewport and device."
+                    . "</p><p>"
+                    . "To see the difference between static and fixed top"
+                    . " navbars, just scroll.",
+                'btn_href'  => "#",
+                'btn_text'  => "View navbar docs",
+            );
+            
+            $navbardiv = array(
+                'subclass'  => 'default',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'navbar-fixed-top';
             $data['brand']          = $this->brand;
-            $data['title']          = "Fixed Top Navbar Example for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = "Fixed Top Navbar Example for Bootstrap";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
             $data['navbar_nav']     = $this->navbar_nav;
-            $data['navbar_class_top']   = " navbar-fixed-top";
-            $data['container_class']   = "container";
-            $data['jumbo_p']        = $jumbo_p;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'View navbar docs &raquo;';
+            $data['navbar_class']   = $this->navbar_class;
             $data['copyright']      = $this->copyright;
+            $data['jumbotron']      = $jumbotron;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/container_open');
-            $this->load->view('bootstrap/navbar/jumbotron',$data);
+            $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
@@ -397,40 +489,44 @@
         {
             $carousel = array(
                 array(
-                    'item_class'    => 'item active',
+                    'active'        => TRUE,
                     'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'       => NULL,
                     'img_alt'       => 'First slide',
-                    'h1'            => 'Example headline.',
-                    'p'             => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
-                    'href'          => '#',
-                    'button'        => 'Sign up today',
+                    'headline'            => 'Example headline.',
+                    'text'             => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
+                    'btn_href'          => '#',
+                    'btn_text'        => 'Sign up today',
                 ),
                 array(
-                    'item_class'    => 'item',
+                    'active'        => FALSE,
                     'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'       => NULL,
                     'img_alt'       => 'Second slide',
-                    'h1'            => 'Another example headline.',
-                    'p'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'href'          => '#',
-                    'button'        => 'Learn more',
+                    'headline'            => 'Another example headline.',
+                    'text'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'btn_href'          => '#',
+                    'btn_text'        => 'Learn more',
                 ),
                 array(
-                    'item_class'    => 'item',
+                    'active'        => FALSE,
                     'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'       => NULL,
                     'img_alt'       => 'Third slide',
-                    'h1'            => 'One more for good measure.',
-                    'p'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'href'          => '#',
-                    'button'        => 'Browse gallery',
+                    'headline'            => 'One more for good measure.',
+                    'text'             => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'btn_href'          => '#',
+                    'btn_text'        => 'Browse gallery',
                 ),
                 array(
-                    'item_class'    => 'item',
+                    'active'        => FALSE,
                     'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'       => NULL,
                     'img_alt'       => 'Fourth forth',
-                    'h1'            => 'Because I can.',
-                    'p'             => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
-                    'href'          => '#',
-                    'button'        => 'So there',
+                    'headline'            => 'Because I can.',
+                    'text'             => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
+                    'btn_href'          => '#',
+                    'btn_text'        => 'So there',
                 ),
             );
             $marketing = array(
@@ -483,6 +579,13 @@
                 ),
             );
             
+            $navbardiv = array(
+                'subclass'  => 'inverse',
+                'top'       => 'static',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
+            
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
             $data['bootstrap_js']   = $this->bootstrap_js;
@@ -491,16 +594,27 @@
             $data['title']          = "Carousel Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
             $data['navfoot']        = $this->navfoot;
             $data['copyright']      = $this->copyright;
             
             $data['carousel']   = $carousel;
+            $data['carousel_id']   = "myCarousel";
             $data['marketing']  = $marketing;
             $data['featurette'] = $featurette;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_wrapper');
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/carousel/navbar',$data);
-            $this->load->view('bootstrap/carousel/carousel',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close_wrapper');            
+            $this->load->view('bootstrap/theme/carousel',$data);
             $this->load->view('bootstrap/carousel/marketing',$data);
             $this->load->view('bootstrap/carousel/featurette',$data);
             $this->load->view('bootstrap/footer',$data);
@@ -605,6 +719,12 @@
                 '#','Header1','Header2','Header3','Header4',
             );
             
+            $navbardiv = array(
+                'subclass'  => 'inverse',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => TRUE,
+            );
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -614,6 +734,7 @@
             $data['title']          = "Dashboard Template for Bootstrap";            
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar; 
+            $data['navbardiv']      = $navbardiv; 
             $data['h2']             = "Table Section";
             $data['copyright']      = $this->copyright;
             
@@ -621,7 +742,14 @@
             $data['thead']      = $thead;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/dashboard/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/dashboard/nav_sidebar',$data);
             $this->load->view('bootstrap/dashboard/dashboard',$data);
             $this->load->view('bootstrap/dashboard/table',$data);
@@ -709,7 +837,14 @@
                 the <code>body > .container</code>.</p>';
             $next_p = 'Back to <a href="'
                 . site_url('templates/sticky_footer/')
-                . '"\>the default sticky footer</a> minus the navbar.';
+                . '"\>the default sticky footer</a> minus the navbar.';            
+            
+            $navbardiv = array(
+                'subclass'  => 'default',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
             
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -719,12 +854,21 @@
             $data['title']          = "Sticky Footer Navbar Template for Bootstrap";           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $navbardiv;
+            $data['navfoot']        = $this->navfoot;
             $data['lead_p']         = $lead_p;
             $data['next_p']         = $next_p;
             $data['copyright']      = $this->copyright;
         
-            $this->load->view('bootstrap/head',$data);            
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/sticky_footer/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/sticky_footer/header',$data);
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);

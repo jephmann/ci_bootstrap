@@ -24,12 +24,20 @@
             $data['brand']          = $this->brand;
             $data['title']          = "Privacy";
             $data['navbar']         = $this->navbar;
+            $data['navbardiv']      = $this->starter_navbardiv;
             $data['navfoot']        = $this->navfoot;
             $data['lead']           = $lead;
             $data['copyright']      = $this->copyright;
 
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/theme/navbar/open_nav');
+            $this->load->view('bootstrap/theme/navbar/open_container');
+            $this->load->view('bootstrap/theme/navbar/header');
+            $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/starter/navbar',$data);
+            $this->load->view('bootstrap/theme/navbar/close_collapse');
+            $this->load->view('bootstrap/theme/navbar/close_container');
+            $this->load->view('bootstrap/theme/navbar/close_nav');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/starter',$data);
             $this->load->view('bootstrap/container_close');

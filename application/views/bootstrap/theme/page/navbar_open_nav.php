@@ -1,0 +1,1 @@
+<div class="navbar navbar-<?php echo $navbar_class[1]; ?> navbar-fixed-top" role="navigation">

@@ -17,6 +17,7 @@ class CIBS_Controller extends CI_Controller
         public $bootstrap_js;
         public $navbar;
         public $navfoot;
+        public $starter_navbardiv;
         // samples
         public $page_header;
         public $jumbotron;
@@ -34,6 +35,7 @@ class CIBS_Controller extends CI_Controller
         public $panels;
         public $well_text;
         public $carousel;
+        public $carousel_id;
         
         public function __construct() {
             parent::__construct();
@@ -51,17 +53,33 @@ class CIBS_Controller extends CI_Controller
             // common navigation
             $this->navbar = array(
                 array(
-                    'href' => 'contents',
-                    'text' => 'Contents',
+                    'href'  => 'contents',
+                    'text'  => 'Contents',
+                    'p'     => "Bootstrap did not supply a Contents page."
+                        . " I created one based on the starter template."
+                        . " I use it to replace 'Home' in the navigation.",
                 ),
                 array(
                     'href' => 'about',
                     'text' => 'About',
+                    'p'     => "Bootstrap did not supply an About page."
+                        . " However, its navagation often points to one."
+                        . " So I created one based on the starter template.",
                 ),
                 array(
                     'href' => 'contact',
                     'text' => 'Contact',
+                    'p'     => "Bootstrap did not supply a Contact page."
+                        . " However, its navagation often points to one."
+                        . " So I created one based on the starter template.",
                 ),
+            );
+            
+            $this->starter_navbardiv = array(
+                'subclass'  => 'inverse',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
             );
             
             // common footer navigation
@@ -81,7 +99,7 @@ class CIBS_Controller extends CI_Controller
             
             // sample jumbotron
             $this->jumbotron = array(
-                'h1'    => "Hello, world!",
+                'headline'    => "Hello, world!",
                 'text'  => "This is a template for a simple marketing or informational website. It
         includes a large callout called a jumbotron and three supporting pieces
         of content. Use it as a starting point to create something more unique.",
@@ -334,27 +352,48 @@ class CIBS_Controller extends CI_Controller
             
             $this->carousel = array(
                 array(
-                    'active'    => TRUE,
-                    'data-src'  => 'holder.js/1140x500/auto/#777:#555/text:First slide',
-                    'alt'       => '1st slide',
+                    'active'        => TRUE,
+                    'img_src'       => NULL,
+                    'img_data-src'  => 'holder.js/1140x500/auto/#777:#555/text:First slide',
+                    'img_alt'       => '1st slide',
+                    'headline'      => NULL,
+                    'text'          => NULL,
+                    'btn_href'      => NULL,
+                    'btn_text'      => NULL,
                 ),
                 array(
-                    'active'    => FALSE,
-                    'data-src'  => 'holder.js/1140x500/auto/#666:#444/text:Second slide',
-                    'alt'       => '2nd slide',
+                    'active'        => FALSE,
+                    'img_src'       => NULL,
+                    'img_data-src'  => 'holder.js/1140x500/auto/#666:#444/text:Second slide',
+                    'img_alt'       => '2nd slide',
+                    'headline'      => "Test",
+                    'text'          => "No Button",
+                    'btn_href'      => NULL,
+                    'btn_text'      => NULL,
                 ),
                 array(
-                    'active'    => FALSE,
-                    'data-src'  => 'holder.js/1140x500/auto/#555:#333/text:Third slide',
-                    'alt'       => '3rd slide',
+                    'active'        => FALSE,
+                    'img_src'       => NULL,
+                    'img_data-src'  => 'holder.js/1140x500/auto/#555:#333/text:Third slide',
+                    'img_alt'       => '3rd slide',
+                    'headline'      => NULL,
+                    'text'          => NULL,
+                    'btn_href'      => "#",
+                    'btn_text'      => "No Headline/Text",
                 ),
                 array(
-                    'active'    => FALSE,
-                    'data-src'  => 'holder.js/1140x500/auto/#444:#222/text:Fourth slide',
-                    'alt'       => '4th slide',
+                    'active'        => FALSE,
+                    'img_src'       => NULL,
+                    'img_data-src'  => 'holder.js/1140x500/auto/#444:#222/text:Fourth slide',
+                    'img_alt'       => '4th slide',
+                    'headline'            => 'Example headline.',
+                    'text'             => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
+                    'btn_href'          => '#',
+                    'btn_text'        => 'Sign up today',
                 ),
-                
             );
+            
+            $this->carousel_id  = 'carousel-example-generic';
             
         }
     }

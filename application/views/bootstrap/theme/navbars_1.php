@@ -1,4 +1,4 @@
-<?php // views\bootstrap\theme\page\navbar.php ?>
+<?php // views\bootstrap\theme\navbars_1.php ?>
 <ul class="nav navbar-nav">
     <?php for($n=0; $n<count($navbar); $n++) : ?>
     <li<?php

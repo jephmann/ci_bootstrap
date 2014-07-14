@@ -1,0 +1,1 @@
+<div class="navbar navbar-<?php echo $navbar_class[0]; ?>">

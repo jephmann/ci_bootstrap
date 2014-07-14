@@ -196,6 +196,10 @@ friendly."
 - Bootstrap: http://getbootstrap.com/examples/justified-nav/
 - ci_boostrap: ...templates/justified_nav
 
+Per their sample: "As of v7.0.1, Safari exhibits a bug in which resizing your
+browser horizontally causes rendering errors in the justified nav that are
+cleared upon refreshing."
+
 =====
 
 #### Sticky footer
