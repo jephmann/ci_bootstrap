@@ -85,9 +85,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/starter/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/starter',$data);
             $this->load->view('bootstrap/container_close');
@@ -146,54 +144,66 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/theme/page/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/theme/page/container_open',$data);
+            // jumbotron
             $this->load->view('bootstrap/theme/jumbotron',$data);
+            // buttons
             $this->load->view('bootstrap/theme/intro/buttons',$data);
-            $this->load->view('bootstrap/theme/buttons',$data);
+            $this->load->view('bootstrap/theme/buttons',$data);            
+            // tables
             $this->load->view('bootstrap/theme/intro/tables',$data);
             $this->load->view('bootstrap/theme/tables',$data);
+            // thumbnails
             $this->load->view('bootstrap/theme/intro/thumbnails',$data);
             $this->load->view('bootstrap/theme/thumbnails',$data);
+            // labels
             $this->load->view('bootstrap/theme/intro/labels',$data);
-            $this->load->view('bootstrap/theme/labels',$data);
+            $this->load->view('bootstrap/theme/labels',$data);            
+            // badges
             $this->load->view('bootstrap/theme/intro/badges',$data);
             $this->load->view('bootstrap/theme/badges',$data);
+            // dropdown menus
             $this->load->view('bootstrap/theme/intro/dropdown_menus',$data);
             $this->load->view('bootstrap/theme/dropdown_menus',$data);
+            // navs
             $this->load->view('bootstrap/theme/intro/navs',$data);
             $this->load->view('bootstrap/theme/navs',$data);
+            // navbars
             $this->load->view('bootstrap/theme/intro/navbars',$data);
+            // 'default' navbar style
             $this->load->view('bootstrap/theme/page/navbar_open_nav_0');
             $this->load->view('bootstrap/theme/page/navbar_open_container');
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/theme/navbars_0',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
+            // 'inverse' navbar style
             $this->load->view('bootstrap/theme/page/navbar_open_nav_1');
             $this->load->view('bootstrap/theme/page/navbar_open_container');
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/theme/navbars_1',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
+            // alerts
             $this->load->view('bootstrap/theme/intro/alerts',$data);
             $this->load->view('bootstrap/theme/alerts',$data);
+            // progress bars
             $this->load->view('bootstrap/theme/intro/progress_bars',$data);
             $this->load->view('bootstrap/theme/progress_bars',$data);
+            // list groups
             $this->load->view('bootstrap/theme/intro/list_groups',$data);
             $this->load->view('bootstrap/theme/list_groups',$data);
+            // panels
             $this->load->view('bootstrap/theme/intro/panels',$data);
             $this->load->view('bootstrap/theme/panels',$data);
+            // wells
             $this->load->view('bootstrap/theme/intro/wells',$data);
             $this->load->view('bootstrap/theme/wells',$data);
+            // carousel
             $this->load->view('bootstrap/theme/intro/carousel',$data);
             $this->load->view('bootstrap/theme/carousel',$data);
+            // THE END
             $this->load->view('bootstrap/theme/page/container_close',$data);
             $this->load->view('bootstrap/foot_docs',$data);
 
@@ -257,9 +267,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/jumbotron/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/jumbotron/jumbotron',$data);
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/jumbotron/row',$data);            
@@ -345,9 +353,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
@@ -396,9 +402,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
@@ -448,9 +452,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/navbar/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/theme/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
@@ -610,9 +612,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/carousel/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/theme/navbar/close_wrapper');            
             $this->load->view('bootstrap/theme/carousel',$data);
             $this->load->view('bootstrap/carousel/marketing',$data);
@@ -747,9 +747,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/dashboard/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/dashboard/nav_sidebar',$data);
             $this->load->view('bootstrap/dashboard/dashboard',$data);
             $this->load->view('bootstrap/dashboard/table',$data);
@@ -866,9 +864,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/sticky_footer/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/sticky_footer/header',$data);
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
