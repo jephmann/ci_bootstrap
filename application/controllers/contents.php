@@ -30,9 +30,7 @@
             $this->load->view('bootstrap/theme/navbar/header');
             $this->load->view('bootstrap/theme/navbar/open_collapse');
             $this->load->view('bootstrap/starter/navbar',$data);
-            $this->load->view('bootstrap/theme/navbar/close_collapse');
-            $this->load->view('bootstrap/theme/navbar/close_container');
-            $this->load->view('bootstrap/theme/navbar/close_nav');
+            $this->load->view('bootstrap/theme/navbar/close');
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/starter/contents',$data);
             $this->load->view('bootstrap/container_close');

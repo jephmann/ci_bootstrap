@@ -148,20 +148,35 @@ class CIBS_Controller extends CI_Controller
             
             // sample navbar dropdown menu
             $this->navbar_dropdown = array(
-                array(
-                    'class' => NULL,
-                    'href'  => "#",
-                    'text'  => 'Action',
+                array( // how we handle dropdown section names
+                    'class' => 'dropdown-header',
+                    'href'  => NULL,
+                    'text'  => 'Using the Framework',
                 ),
                 array(
                     'class' => NULL,
-                    'href'  => "#",
-                    'text'  => 'Another action',
+                    'href'  => site_url('templates/starter'),
+                    'text'  => 'Starter template',
                 ),
                 array(
                     'class' => NULL,
-                    'href'  => "#",
-                    'text'  => 'Something else here',
+                    'href'  => site_url('templates/theme'),
+                    'text'  => 'Bootstrap theme',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/grids'),
+                    'text'  => 'Grids',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/jumbotron'),
+                    'text'  => 'Jumbotron',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/jumbotronnarrow'),
+                    'text'  => 'Narrow jumbotron',
                 ),
                 array( // how we handle dropdown section dividers
                     'class' => 'divider',
@@ -171,17 +186,92 @@ class CIBS_Controller extends CI_Controller
                 array( // how we handle dropdown section names
                     'class' => 'dropdown-header',
                     'href'  => NULL,
-                    'text'  => 'Nav header',
+                    'text'  => 'Navbars in action',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/navbar'),
+                    'text'  => 'Navbar',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/navbar_static'),
+                    'text'  => 'Static top navbar',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/navbar_fixed'),
+                    'text'  => 'Fixed navbar',
+                ),
+                array( // how we handle dropdown section dividers
+                    'class' => 'divider',
+                    'href'  => NULL,
+                    'text'  => NULL,
+                ),
+                array( // how we handle dropdown section names
+                    'class' => 'dropdown-header',
+                    'href'  => NULL,
+                    'text'  => 'Custom components',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/cover'),
+                    'text'  => 'Cover',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/carousel'),
+                    'text'  => 'Carousel',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/blog'),
+                    'text'  => 'Blog',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/dashboard'),
+                    'text'  => 'Dashboard',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/signin'),
+                    'text'  => 'Sign-in page',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/justified_nav'),
+                    'text'  => 'Justified nav',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/sticky_footer'),
+                    'text'  => 'Sticky footer',
+                ),
+                array(
+                    'class' => NULL,
+                    'href'  => site_url('templates/sticky_footer_navbar'),
+                    'text'  => 'Sticky footer with navbar',
+                ),
+                array( // how we handle dropdown section dividers
+                    'class' => 'divider',
+                    'href'  => NULL,
+                    'text'  => NULL,
+                ),
+                array( // how we handle dropdown section names
+                    'class' => 'dropdown-header',
+                    'href'  => NULL,
+                    'text'  => 'Experiments',
                 ),
                 array(
                     'class' => NULL,
                     'href'  => "#",
-                    'text'  => 'Separated link',
+                    'text'  => 'Non-responsive Bootstrap',
                 ),
                 array(
                     'class' => NULL,
                     'href'  => "#",
-                    'text'  => 'One more separated link',
+                    'text'  => 'Offcanvas',
                 ),
                 
             );
