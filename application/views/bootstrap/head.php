@@ -23,4 +23,4 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body role="document">
+    <body<?php if($body_role != NULL) : ?> role="document"<?php endif; ?>>

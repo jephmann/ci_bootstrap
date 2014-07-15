@@ -28,6 +28,7 @@ class CIBS_Controller extends CI_Controller
         public $navbars;
         public $navbar_class;
         public $navbar_dropdown;
+        public $navbar_right;
         public $alerts;
         public $progress;
         public $progress_shared;
@@ -72,6 +73,21 @@ class CIBS_Controller extends CI_Controller
                     'p'     => "Bootstrap did not supply a Contact page."
                         . " However, its navagation often points to one."
                         . " So I created one based on the starter template.",
+                ),
+            );
+            
+            $this->navbar_right = array(
+                array(
+                    'href' => 'templates/navbar',
+                    'text' => 'Default',
+                ),
+                array(
+                    'href' => 'templates/navbar_static',
+                    'text' => 'Static top',
+                ),
+                array(
+                    'href' => 'templates/navbar_fixed',
+                    'text' => 'Fixed top',
                 ),
             );
             
@@ -148,6 +164,11 @@ class CIBS_Controller extends CI_Controller
             
             // sample navbar dropdown menu
             $this->navbar_dropdown = array(
+                array( // use this zero for the main dropdown button
+                    'class' => NULL,
+                    'href'  => '#',
+                    'text'  => 'Templates',
+                ),
                 array( // how we handle dropdown section names
                     'class' => 'dropdown-header',
                     'href'  => NULL,
