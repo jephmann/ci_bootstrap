@@ -221,6 +221,20 @@ it."
 
 ### "Experiments" -- yet to be built
 
+#### Non-responsive Bootstrap
+"Easily disable the responsiveness of Bootstrap per our docs.."
+
+- Bootstrap: http://getbootstrap.com/examples/non-responsive/
+- ci_boostrap: ...templates/nonresponsive/
+
+===== 
+
+#### Offcanvas
+"Build a toggleable off-canvas navigation menu for use with Bootstrap."
+
+- Bootstrap: http://getbootstrap.com/examples/carousel/
+- ci_boostrap: ...templates/carousel
+
 =====
 
 ## *Additional pages*

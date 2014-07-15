@@ -1,7 +1,6 @@
 <div class="starter-template">
     <h1><?php echo $brand; ?></h1>
     <h2><?php echo $title; ?></h2>
-    <p>(If no link appears, the page has yet to be created.)</p>
     <h3>"Using the Framework"</h3>
     <p>
         <a href="<?php echo site_url('templates/starter'); ?>">Starter template</a><br />
@@ -29,7 +28,7 @@
     </p>
     <h3>"Experiments"</h3>
     <p>
-        Non-responsive Bootstrap<br />
-        Offcanvas<br />
+        <a href="<?php echo site_url('templates/nonresponsive'); ?>">Non-responsive Bootstrap</a><br />
+        <a href="<?php echo site_url('templates/offcanvas'); ?>">Offcanvas</a><br />
     </p>
 </div>

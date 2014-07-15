@@ -286,12 +286,12 @@ class CIBS_Controller extends CI_Controller
                 ),
                 array(
                     'class' => NULL,
-                    'href'  => "#",
+                    'href'  => site_url('templates/nonresponsive'),
                     'text'  => 'Non-responsive Bootstrap',
                 ),
                 array(
                     'class' => NULL,
-                    'href'  => "#",
+                    'href'  => site_url('templates/offcanvas'),
                     'text'  => 'Offcanvas',
                 ),
                 

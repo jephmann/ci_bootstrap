@@ -901,4 +901,40 @@
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
+        
+        public function nonresponsive()
+        {
+            
+            $data['body_role']          = NULL;
+            $data['bootstrap']          = $this->bootstrap;
+            $data['bootstrap_css']      = $this->bootstrap_css;
+            $data['bootstrap_js']       = $this->bootstrap_js;
+            $data['custom_css']         = NULL;
+            $data['brand']              = $this->brand;
+            $data['title']              = "Non-responsive Template for Bootstrap";
+            $data['copyright']          = $this->copyright;  
+        
+            $this->load->view('bootstrap/head',$data);
+            echo 'reserved for non-responsive';
+            $this->load->view('bootstrap/foot',$data);
+        }
+        
+        public function offcanvas()
+        {
+            
+            $data['body_role']          = NULL;
+            $data['bootstrap']          = $this->bootstrap;
+            $data['bootstrap_css']      = $this->bootstrap_css;
+            $data['bootstrap_js']       = $this->bootstrap_js;
+            $data['custom_css']         = NULL;
+            $data['brand']              = $this->brand;
+            $data['title']              = "Off Canvas Template for Bootstrap";
+            $data['copyright']          = $this->copyright;    
+        
+            $this->load->view('bootstrap/head',$data);
+            echo 'reserved for off-canvas';
+            $this->load->view('bootstrap/foot',$data);
+        }
+        
+        
     }
