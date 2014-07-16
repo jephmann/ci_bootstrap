@@ -24,6 +24,7 @@
             $inner_p = 'Welcome to CodeIgniter Bootstrap';
             $inner_p .= '<br />A combination of two frameworks, back-end and front-end';
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -51,6 +52,7 @@
             $lead .= '<br />';
             $lead .= 'All you get is this text and a mostly barebones HTML document.';
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -99,6 +101,7 @@
                 'xs',
             );
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -211,6 +214,7 @@
         public function grids()
         {
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -249,6 +253,7 @@
                 'fluid'     => FALSE,
             );
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -283,7 +288,8 @@
         {
             $lead_p = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
             $lead_p .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
-                        
+            
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -329,6 +335,7 @@
                 'fluid'     => TRUE,
             );            
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = NULL;
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -388,6 +395,7 @@
                 'fluid'     => FALSE,
             );
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = NULL;
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -444,6 +452,7 @@
                 'fluid'     => FALSE,
             );
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = NULL;
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -483,6 +492,7 @@
             $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
             $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -606,6 +616,7 @@
                 'fluid'     => FALSE,
             );
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -686,6 +697,7 @@
             
             $lead_p = 'The official example template of creating a blog with Bootstrap.';
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -748,6 +760,7 @@
                 'fluid'     => TRUE,
             );
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -781,6 +794,7 @@
         public function signin()
         {
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -801,6 +815,7 @@
             $lead_p = "Cras justo odio, dapibus ac facilisis in, egestas eget quam.";
             $lead_p .= "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.";
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -834,6 +849,7 @@
                 . site_url('templates/sticky_footer_navbar/')
                 . '"\>the sticky footer with a fixed navbar</a> if need be, too.';
             
+            $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
             $data['bootstrap_css']  = $this->bootstrap_css;
@@ -871,6 +887,7 @@
                 'fluid'     => FALSE,
             );
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
@@ -904,36 +921,88 @@
         
         public function nonresponsive()
         {
+            $navbardiv = array(
+                'subclass'  => 'default',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
             
+            $data['viewport']           = FALSE;
             $data['body_role']          = NULL;
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
             $data['bootstrap_js']       = $this->bootstrap_js;
-            $data['custom_css']         = NULL;
+            $data['custom_css']         = 'non-responsive';
             $data['brand']              = $this->brand;
             $data['title']              = "Non-responsive Template for Bootstrap";
+            $data['navbar']             = $this->navbar;
+            $data['navbardiv']          = $navbardiv;
+            $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['copyright']          = $this->copyright;  
         
             $this->load->view('bootstrap/head',$data);
-            echo 'reserved for non-responsive';
+            $this->load->view('bootstrap/navbar/open_nav');
+            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/navbar/header');
+            $this->load->view('bootstrap/navbar/open_collapse');           
+            $this->load->view('bootstrap/navbar/open_bar');
+            $this->load->view('bootstrap/navbar/li_core',$data);
+            $this->load->view('bootstrap/navbar/li_dropdown',$data);
+            $this->load->view('bootstrap/navbar/close_bar'); 
+            $this->load->view('bootstrap/navbar/close');
+            $this->load->view('bootstrap/container_open',$data);
+            $this->load->view('bootstrap/nonresponsive/nonresponsive',$data);
+            $this->load->view('bootstrap/container_close',$data);
             $this->load->view('bootstrap/foot',$data);
         }
         
         public function offcanvas()
         {
+            $navbardiv = array(
+                'subclass'  => 'inverse',
+                'top'       => 'fixed',
+                'role'      => 'navigation',
+                'fluid'     => FALSE,
+            );
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = NULL;
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;
             $data['bootstrap_js']       = $this->bootstrap_js;
-            $data['custom_css']         = NULL;
+            $data['custom_css']         = 'offcanvas';
             $data['brand']              = $this->brand;
             $data['title']              = "Off Canvas Template for Bootstrap";
-            $data['copyright']          = $this->copyright;    
+            $data['navbar']             = $this->navbar;
+            $data['navbardiv']          = $navbardiv;
+            $data['navbar_dropdown']    = $this->navbar_dropdown;
+            $data['copyright']          = $this->copyright;
+            $data['navfoot']            = $this->navfoot;
         
             $this->load->view('bootstrap/head',$data);
-            echo 'reserved for off-canvas';
-            $this->load->view('bootstrap/foot',$data);
+            $this->load->view('bootstrap/navbar/open_nav');
+            $this->load->view('bootstrap/navbar/open_container');
+            $this->load->view('bootstrap/navbar/header');
+            $this->load->view('bootstrap/navbar/open_collapse');           
+            $this->load->view('bootstrap/navbar/open_bar');
+            $this->load->view('bootstrap/navbar/li_core',$data);
+            $this->load->view('bootstrap/navbar/li_dropdown',$data);
+            $this->load->view('bootstrap/navbar/close_bar'); 
+            $this->load->view('bootstrap/navbar/close');
+            $this->load->view('bootstrap/container_open',$data);            
+            $this->load->view('bootstrap/offcanvas/row_open',$data);
+            $this->load->view('bootstrap/offcanvas/col_open',$data);
+            $this->load->view('bootstrap/offcanvas/toggle_nav',$data);
+            $this->load->view('bootstrap/offcanvas/jumbotron',$data);
+            $this->load->view('bootstrap/offcanvas/headings',$data);
+            $this->load->view('bootstrap/offcanvas/col_close',$data);
+            $this->load->view('bootstrap/offcanvas/sidebar');
+            $this->load->view('bootstrap/offcanvas/row_close');
+            $this->load->view('bootstrap/hr',$data);
+            $this->load->view('bootstrap/footer',$data);
+            $this->load->view('bootstrap/container_close',$data);
+            $this->load->view('bootstrap/foot_docs',$data);
         }
         
         

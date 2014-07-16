@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php if($viewport == TRUE) : ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php endif; ?>
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
