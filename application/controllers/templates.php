@@ -939,6 +939,7 @@
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
+            $data['navbar_right']       = $this->navbar_right; 
             $data['copyright']          = $this->copyright;  
         
             $this->load->view('bootstrap/head',$data);
@@ -949,7 +950,8 @@
             $this->load->view('bootstrap/navbar/open_bar');
             $this->load->view('bootstrap/navbar/li_core',$data);
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
-            $this->load->view('bootstrap/navbar/close_bar'); 
+            $this->load->view('bootstrap/navbar/close_bar');
+            $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/container_open',$data);
             $this->load->view('bootstrap/nonresponsive/nonresponsive',$data);
