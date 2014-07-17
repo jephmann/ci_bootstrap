@@ -85,6 +85,23 @@
         
         public function theme()
         {
+            $title  = "Theme Template for Bootstrap";
+            
+            $lead   = "This is a template for a simple marketing or
+                informational website. It includes a large callout called a
+                jumbotron and three supporting pieces of content. Use it as a
+                starting point to create something more unique.";
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => NULL,
+                'lead_text'     => $lead,
+                'btn_class'     => 'primary',
+                'btn_href'      => "#",
+                'btn_text'      => "Learn more",
+            );
+            
             $btn_text = array(
                 'Default',
                 'Primary',
@@ -108,13 +125,13 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'theme';
             $data['brand']          = $this->brand;
-            $data['title']          = "Theme Template for Bootstrap";
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['btn_size']       = $btn_size;
             $data['btn_text']       = $btn_text;
             // samples
-            $data['jumbotron']          = $this->jumbotron;
+            $data['jumbotron']          = $jumbotron;
             $data['table_th']           = $this->table_th;
             $data['labels']             = $this->labels;
             $data['navs']               = $this->navs;
@@ -143,7 +160,7 @@
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/theme/page/container_open',$data);
             // jumbotron
-            $this->load->view('bootstrap/theme/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             // buttons
             $this->load->view('bootstrap/theme/intro/buttons',$data);
             $this->load->view('bootstrap/theme/buttons',$data);            
@@ -242,15 +259,27 @@
 
 	public function jumbotron()
 	{
-            $jumbo_p = 'This is a template for a simple marketing or informational website.';
-            $jumbo_p .= ' It includes a large callout called a jumbotron and three supporting pieces of content.';
-            $jumbo_p .= ' Use it as a starting point to create something more unique.';
+            $title  = "Jumbotron Template for Bootstrap";
+            
+            $lead   = 'This is a template for a simple marketing or informational website.';
+            $lead   .= ' It includes a large callout called a jumbotron and three supporting pieces of content.';
+            $lead   .= ' Use it as a starting point to create something more unique.';
             
             $navbardiv = array(
                 'subclass'  => 'inverse',
                 'top'       => 'fixed',
                 'role'      => 'navigation',
                 'fluid'     => FALSE,
+            );
+            
+            $jumbotron = array(
+                'container'     => TRUE,
+                'headline'      => $title,
+                'lead_class'    => 'lead',
+                'lead_text'     => $lead,
+                'btn_class'     => 'primary', // or success
+                'btn_href'      => "#",
+                'btn_text'      => "Learn more",
             );
             
             $data['viewport']       = TRUE;
@@ -260,11 +289,11 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron';
             $data['brand']          = $this->brand;
-            $data['title']          = "Jumbotron Template for Bootstrap";
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar;
             $data['navbardiv']      = $navbardiv;
             $data['navfoot']        = $this->navfoot;
-            $data['jumbo_p']        = $jumbo_p;
+            $data['jumbotron']      = $jumbotron;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);            
@@ -272,9 +301,9 @@
             $this->load->view('bootstrap/navbar/open_container');
             $this->load->view('bootstrap/navbar/header');
             $this->load->view('bootstrap/navbar/open_collapse');
-            $this->load->view('bootstrap/jumbotron/navbar',$data);
+            $this->load->view('bootstrap/jumbotron/nav_form');
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/jumbotron/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/container_open');
             $this->load->view('bootstrap/jumbotron/row',$data);            
             $this->load->view('bootstrap/hr');
@@ -286,6 +315,20 @@
         
         public function jumbotronnarrow()
         {
+            $title  = "Narrow Jumbotron Template for Bootstrap";
+            $lead   = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
+            $lead .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
+                        
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => 'lead',
+                'lead_text'     => $lead,
+                'btn_class'     => 'success',
+                'btn_href'      => "#",
+                'btn_text'      => "Sign up today",
+            );            
+            
             $lead_p = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
             $lead_p .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
             
@@ -296,13 +339,11 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'jumbotron-narrow';
             $data['brand']          = $this->brand;
-            $data['title']          = "Narrow Jumbotron Template for Bootstrap";  
+            $data['title']          = $title;  
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
-            $data['lead_p']         = $lead_p;
+            $data['jumbotron']      = $jumbotron;
             $data['copyright']      = $this->copyright;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'Sign up today';
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/container_open');
@@ -316,24 +357,30 @@
         }
         
         public function navbar()
-        {
-            // sample jumbotron
-            $jumbotron = array(
-                'headline'  => "Navbar Template for Bootstrap",
-                'text'      => "This example is a quick exercise to illustrate how the"
+        {            
+            $title  = "Navbar Template for Bootstrap";
+            
+            $lead   = "This example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
-                    . " to your viewport and device.",
-                'btn_href'  => "#",
-                'btn_text'  => "View navbar docs",
-            );
+                    . " to your viewport and device.";
             
             $navbardiv = array(
                 'subclass'  => 'default',
                 'top'       => NULL,
                 'role'      => 'navigation',
                 'fluid'     => TRUE,
-            );            
+            );
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => NULL,
+                'lead_text'     => $lead,
+                'btn_class'     => 'primary',
+                'btn_href'      => "#",
+                'btn_text'      => "View navbar docs",
+            );
             
             $data['viewport']           = TRUE;
             $data['body_role']          = NULL;
@@ -342,7 +389,7 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'navbar';
             $data['brand']              = $this->brand;
-            $data['title']              = "Navbar Template for Bootstrap";
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_right']       = $this->navbar_right;            
@@ -350,9 +397,9 @@
             $data['nav_class']          = $this->nav_class;
             $data['navs']               = $this->navbars;
             $data['navbar_class']       = $this->navbar_class;
-            $data['navbar_dropdown']    = $this->navbar_dropdown;            
+            $data['navbar_dropdown']    = $this->navbar_dropdown;
+            $data['jumbotron']          = $jumbotron;            
             $data['copyright']          = $this->copyright;
-            $data['jumbotron']          = $jumbotron;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/container_open');
@@ -366,33 +413,39 @@
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/theme/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }
         
         public function navbar_static()
-        {
-            // sample jumbotron
-            $jumbotron = array(
-                'headline'  => "Static Top Navbar Example for Bootstrap",
-                'text'      => "This example is a quick exercise to illustrate how the"
+        {            
+            $title  = "Static Top Navbar Example for Bootstrap";
+            
+            $lead   = "This example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
                     . " to your viewport and device."
                     . "</p><p>"
                     . "To see the difference between static and fixed top"
-                    . " navbars, just scroll.",
-                'btn_href'  => "#",
-                'btn_text'  => "View navbar docs",
-            );
+                    . " navbars, just scroll.";
             
             $navbardiv = array(
                 'subclass'  => 'default',
                 'top'       => 'static',
                 'role'      => 'navigation',
                 'fluid'     => FALSE,
+            );
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => NULL,
+                'lead_text'     => $lead,
+                'btn_class'     => 'primary',
+                'btn_href'      => "#",
+                'btn_text'      => "View navbar docs",
             );
             
             $data['viewport']           = TRUE;
@@ -408,8 +461,8 @@
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['navbar_right']       = $this->navbar_right;
             $data['navbar_class']       = $this->navbar_class;
-            $data['copyright']          = $this->copyright;
             $data['jumbotron']          = $jumbotron;
+            $data['copyright']          = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/open_nav');
@@ -423,33 +476,39 @@
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/container_open');
-            $this->load->view('bootstrap/theme/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
         }
         
         public function navbar_fixed()
-        {
-            // sample jumbotron
-            $jumbotron = array(
-                'headline'  => "Fixed Top Navbar Example for Bootstrap",
-                'text'      => "This example is a quick exercise to illustrate how the"
+        {            
+            $title  = "Fixed Top Navbar Example for Bootstrap";
+            
+            $lead   = "This example is a quick exercise to illustrate how the"
                     . " default, static navbar and fixed to top navbar work. It"
                     . " includes the responsive CSS and HTML, so it also adapts"
                     . " to your viewport and device."
                     . "</p><p>"
                     . "To see the difference between static and fixed top"
-                    . " navbars, just scroll.",
-                'btn_href'  => "#",
-                'btn_text'  => "View navbar docs",
-            );
+                    . " navbars, just scroll.";
             
             $navbardiv = array(
                 'subclass'  => 'default',
                 'top'       => 'fixed',
                 'role'      => 'navigation',
                 'fluid'     => FALSE,
+            );
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => NULL,
+                'lead_text'     => $lead,
+                'btn_class'     => 'primary',
+                'btn_href'      => "#",
+                'btn_text'      => "View navbar docs",
             );
             
             $data['viewport']           = TRUE;
@@ -459,7 +518,7 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'navbar-fixed-top';
             $data['brand']              = $this->brand;
-            $data['title']              = "Fixed Top Navbar Example for Bootstrap";
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
@@ -480,7 +539,7 @@
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/container_open');
-            $this->load->view('bootstrap/theme/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
             
@@ -812,9 +871,21 @@
         
         public function justified_nav()
         {
-            $lead_p = "Cras justo odio, dapibus ac facilisis in, egestas eget quam.";
-            $lead_p .= "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.";
+            $title  = "Justified Nav Template for Bootstrap";
             
+            $lead   = "Cras justo odio, dapibus ac facilisis in, egestas eget quam.";
+            $lead   .= "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.";
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => 'lead',
+                'lead_text'     => $lead,
+                'btn_class'     => 'success',
+                'btn_href'      => "#",
+                'btn_text'      => "Get started today",
+            );
+                        
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
@@ -822,13 +893,9 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'justified_nav';
             $data['brand']          = $this->brand;
-            $data['title']          = "Justified Nav Template for Bootstrap";           
-            $data['h1']             = $data['title'];
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
-            $data['lead_p']         = $lead_p;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'Get started today';
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
@@ -961,11 +1028,27 @@
         
         public function offcanvas()
         {
+            $title  = "Off Canvas Template for Bootstrap";
+            
+            $lead   = "This is an example to show the potential of an offcanvas
+                layout pattern in Bootstrap. Try some responsive-range viewport
+                sizes to see it in action.";
+            
             $navbardiv = array(
                 'subclass'  => 'inverse',
                 'top'       => 'fixed',
                 'role'      => 'navigation',
                 'fluid'     => FALSE,
+            );
+            
+            $jumbotron = array(
+                'container'     => FALSE,
+                'headline'      => $title,
+                'lead_class'    => NULL,
+                'lead_text'     => $lead,
+                'btn_class'     => NULL,
+                'btn_href'      => NULL,
+                'btn_text'      => NULL,
             );
             
             $data['viewport']           = TRUE;
@@ -975,10 +1058,11 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'offcanvas';
             $data['brand']              = $this->brand;
-            $data['title']              = "Off Canvas Template for Bootstrap";
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
+            $data['jumbotron']          = $jumbotron;
             $data['copyright']          = $this->copyright;
             $data['navfoot']            = $this->navfoot;
         
@@ -996,7 +1080,7 @@
             $this->load->view('bootstrap/offcanvas/row_open',$data);
             $this->load->view('bootstrap/offcanvas/col_open',$data);
             $this->load->view('bootstrap/offcanvas/toggle_nav',$data);
-            $this->load->view('bootstrap/offcanvas/jumbotron',$data);
+            $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/offcanvas/headings',$data);
             $this->load->view('bootstrap/offcanvas/col_close',$data);
             $this->load->view('bootstrap/offcanvas/sidebar');

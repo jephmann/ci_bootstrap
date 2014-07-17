@@ -13,6 +13,7 @@
             $lead .= ' However, its navagation often points to one.';
             $lead .= ' So I created one based on the starter template.';
             
+            $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;

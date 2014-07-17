@@ -113,16 +113,6 @@ class CIBS_Controller extends CI_Controller
             // sample page header, ideally overwritten
             $this->page_header = 'Page Header';
             
-            // sample jumbotron
-            $this->jumbotron = array(
-                'headline'    => "Hello, world!",
-                'text'  => "This is a template for a simple marketing or informational website. It
-        includes a large callout called a jumbotron and three supporting pieces
-        of content. Use it as a starting point to create something more unique.",
-                'btn_href'  => "#",
-                'btn_text'  => "Learn more",
-            );
-            
             // sample label texts (called via index #)
             $this->labels = array(
                 'default',

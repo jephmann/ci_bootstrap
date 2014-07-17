@@ -8,7 +8,9 @@
     class Contents extends CIBS_Controller
     {
         public function index()
-        {            
+        {
+            
+            $data['viewport']           = TRUE;            
             $data['body_role']          = 'document';
             $data['bootstrap']          = $this->bootstrap;
             $data['bootstrap_css']      = $this->bootstrap_css;

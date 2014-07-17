@@ -1,4 +1,4 @@
-<?php // views\bootstrap\jumbotron\navbar.php ?>
+
 <form class="navbar-form navbar-right" role="form">
     <div class="form-group">
         <input type="text" placeholder="Email" class="form-control">
