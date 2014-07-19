@@ -15,6 +15,9 @@ class CIBS_Controller extends CI_Controller
         public $bootstrap;
         public $bootstrap_css;
         public $bootstrap_js;
+        public $assets;
+        public $assets_css;
+        public $assets_js;
         public $navbar;
         public $navfoot;
         public $starter_navbardiv;
@@ -50,6 +53,11 @@ class CIBS_Controller extends CI_Controller
             $this->bootstrap        = base_url().'bootstrap/';  // path to Bootstrap assets
             $this->bootstrap_css    = $this->bootstrap.'css/';  // path to Bootstrap *.css
             $this->bootstrap_js     = $this->bootstrap.'js/';   // path to Bootstrap *.js
+            
+            // commonly used filepaths to your assets
+            $this->assets       = base_url().'assets/';  // path to your assets
+            $this->assets_css   = $this->assets.'css/';  // path to your *.css
+            $this->assets_js    = $this->assets.'js/';   // path to your *.js
 
             // common navigation
             $this->navbar = array(
