@@ -38,9 +38,9 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/starter',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
             
             /*

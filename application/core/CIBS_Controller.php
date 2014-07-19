@@ -35,8 +35,8 @@ class CIBS_Controller extends CI_Controller
         public $list_groups;
         public $panels;
         public $well_text;
-        public $carousel;
-        public $carousel_id;
+        public $carousel_theme;
+        public $carousel_page;
         
         public function __construct() {
             parent::__construct();
@@ -451,7 +451,9 @@ class CIBS_Controller extends CI_Controller
                 . " lacinia odio sem nec elit. Aenean lacinia bibendum"
                 . " nulla sed consectetur.";
             
-            $this->carousel = array(
+            // carousel section of theme page
+            $this->carousel_theme = array(
+                'id' => 'carousel-example-generic',
                 array(
                     'active'        => TRUE,
                     'img_src'       => NULL,
@@ -494,7 +496,50 @@ class CIBS_Controller extends CI_Controller
                 ),
             );
             
-            $this->carousel_id  = 'carousel-example-generic';
+            // carousel page
+            $this->carousel_page = array(
+                'id' => 'myCarousel',
+                array(
+                    'active'        => TRUE,
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'  => NULL,
+                    'img_alt'       => 'First slide',
+                    'headline'      => 'Example headline.',
+                    'text'          => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
+                    'btn_href'      => '#',
+                    'btn_text'      => 'Sign up today',
+                ),
+                array(
+                    'active'        => FALSE,
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'  => NULL,
+                    'img_alt'       => 'Second slide',
+                    'headline'      => 'Another example headline.',
+                    'text'          => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'btn_href'      => '#',
+                    'btn_text'      => 'Learn more',
+                ),
+                array(
+                    'active'        => FALSE,
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'  => NULL,
+                    'img_alt'       => 'Third slide',
+                    'headline'      => 'One more for good measure.',
+                    'text'          => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
+                    'btn_href'      => '#',
+                    'btn_text'      => 'Browse gallery',
+                ),
+                array(
+                    'active'        => FALSE,
+                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
+                    'img_data-src'  => NULL,
+                    'img_alt'       => 'Fourth forth',
+                    'headline'      => 'Because I can.',
+                    'text'          => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
+                    'btn_href'      => '#',
+                    'btn_text'      => 'So there',
+                ),
+            );
             
         }
     }

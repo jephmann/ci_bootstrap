@@ -20,9 +20,16 @@
             /*
              * Special for this demo, based on the cover template
              */
+            $title  = "Home";            
+            $inner  = 'Welcome to CodeIgniter Bootstrap<br />A combination of'
+                    . ' two frameworks, back-end and front-end';
             
-            $inner_p = 'Welcome to CodeIgniter Bootstrap';
-            $inner_p .= '<br />A combination of two frameworks, back-end and front-end';
+            $cover = array(
+                'title' => $title,
+                'inner' => $inner,
+                'btn_href'  => site_url('contents'),
+                'btn_text'  => "Contents",
+            );
             
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
@@ -31,18 +38,17 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
             $data['brand']          = $this->brand;
-            $data['title']          = "Home";            
-            $data['h1']             = $data['title'];
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar;
-            $data['inner_p']        = $inner_p;
-            $data['btn_href']       = site_url('contents');
-            $data['btn_text']       = 'Contents';
+            $data['cover']          = $cover;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/cover/open');
             $this->load->view('bootstrap/cover/masthead',$data);
             $this->load->view('bootstrap/cover/inner',$data);
             $this->load->view('bootstrap/cover/mastfoot',$data);
+            $this->load->view('bootstrap/cover/close');
             $this->load->view('bootstrap/foot_docs',$data);
         }
         
@@ -77,9 +83,9 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/starter',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
         }
         
@@ -145,8 +151,7 @@
             $data['list_groups']        = $this->list_groups;
             $data['panels']             = $this->panels;
             $data['well_text']          = $this->well_text;
-            $data['carousel']           = $this->carousel;
-            $data['carousel_id']        = $this->carousel_id;
+            $data['carousel']           = $this->carousel_theme;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/theme/page/navbar_open_nav');
@@ -221,7 +226,7 @@
             $this->load->view('bootstrap/theme/wells',$data);
             // carousel
             $this->load->view('bootstrap/theme/intro/carousel',$data);
-            $this->load->view('bootstrap/theme/carousel',$data);
+            $this->load->view('bootstrap/carousel',$data);
             // THE END
             $this->load->view('bootstrap/theme/page/container_close',$data);
             $this->load->view('bootstrap/foot_docs',$data);
@@ -230,6 +235,14 @@
         
         public function grids()
         {
+            $title = "Grid Template for Bootstrap";
+            $lead = "Basic grid layouts to get you familiar with building within"
+                    . " the Bootstrap grid system";
+            
+            $page = array(
+                'title' => $title,
+                'lead'  => $lead,
+            );
             
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
@@ -238,12 +251,13 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'grid';
             $data['brand']          = $this->brand;
-            $data['title']          = "Grid Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = $title;
+            $data['page']           = $page;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);            
-            $this->load->view('bootstrap/grid/header',$data);            
+            $this->load->view('bootstrap/container/open');            
+            $this->load->view('bootstrap/page_header',$data);            
             $this->load->view('bootstrap/grid/three_columns_equal');
             $this->load->view('bootstrap/grid/three_columns_unequal');
             $this->load->view('bootstrap/grid/two_columns');
@@ -253,6 +267,7 @@
             $this->load->view('bootstrap/grid/mixed_mtd');
             $this->load->view('bootstrap/grid/clearing');
             $this->load->view('bootstrap/grid/resets');            
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
 
         }
@@ -304,11 +319,11 @@
             $this->load->view('bootstrap/jumbotron/nav_form');
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/jumbotron/row',$data);            
             $this->load->view('bootstrap/hr');
             $this->load->view('bootstrap/footer',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
 
 	}
@@ -316,8 +331,10 @@
         public function jumbotronnarrow()
         {
             $title  = "Narrow Jumbotron Template for Bootstrap";
-            $lead   = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
-            $lead .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
+            $lead   = 'Cras justo odio, dapibus ac facilisis in, egestas eget'
+                    . ' quam. Fusce dapibus, tellus ac cursus commodo, tortor'
+                    . ' mauris condimentum nibh, ut fermentum massa justo sit'
+                    . ' amet risus.';
                         
             $jumbotron = array(
                 'container'     => FALSE,
@@ -327,10 +344,7 @@
                 'btn_class'     => 'success',
                 'btn_href'      => "#",
                 'btn_text'      => "Sign up today",
-            );            
-            
-            $lead_p = 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.';
-            $lead_p .= ' Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.';
+            );
             
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
@@ -346,12 +360,12 @@
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/jumbotron-narrow/nav',$data);
             $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/jumbotron-narrow/marketing',$data);
             $this->load->view('bootstrap/footer',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot_empty',$data);
             
         }
@@ -402,7 +416,7 @@
             $data['copyright']          = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/navbar/open_nav');
             $this->load->view('bootstrap/navbar/open_container');
             $this->load->view('bootstrap/navbar/header');
@@ -414,7 +428,7 @@
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
             
         }
@@ -475,9 +489,9 @@
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
             
         }
@@ -538,15 +552,27 @@
             $this->load->view('bootstrap/navbar/close_bar');
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
             
         }       
 
 	public function cover()
 	{
+            $title  = "Cover Template for Bootstrap";            
+            $inner  = 'Cover is a one-page template for building simple and'
+                    . ' beautiful home pages. Download, edit the text, and add'
+                    . ' your own fullscreen background photo to make it your'
+                    . ' own.';
+            
+            $cover = array(
+                'title' => $title,
+                'inner' => $inner,
+                'btn_href'  => "#",
+                'btn_text'  => "Learn more",
+            );
             
             $inner_p = 'Cover is a one-page template for building simple and beautiful home pages.';
             $inner_p .= ' Download, edit the text, and add your own fullscreen background photo to make it your own.';
@@ -558,66 +584,25 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'cover';
             $data['brand']          = $this->brand;
-            $data['title']          = "Cover Template for Bootstrap";
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar; 
-            $data['h1']             = $data['title'];            
-            $data['inner_p']        = $inner_p;
-            $data['btn_href']       = '#';
-            $data['btn_text']       = 'Learn more';
+            $data['cover']          = $cover;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/cover/open');
             $this->load->view('bootstrap/cover/masthead',$data);
             $this->load->view('bootstrap/cover/inner',$data);
             $this->load->view('bootstrap/cover/mastfoot',$data);
+            $this->load->view('bootstrap/cover/close');
             $this->load->view('bootstrap/foot_docs',$data);
 
 	}
         
         public function carousel()
         {
-            $carousel = array(
-                array(
-                    'active'        => TRUE,
-                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_data-src'  => NULL,
-                    'img_alt'       => 'First slide',
-                    'headline'      => 'Example headline.',
-                    'text'          => "Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",
-                    'btn_href'      => '#',
-                    'btn_text'      => 'Sign up today',
-                ),
-                array(
-                    'active'        => FALSE,
-                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_data-src'  => NULL,
-                    'img_alt'       => 'Second slide',
-                    'headline'      => 'Another example headline.',
-                    'text'          => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'btn_href'      => '#',
-                    'btn_text'      => 'Learn more',
-                ),
-                array(
-                    'active'        => FALSE,
-                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_data-src'  => NULL,
-                    'img_alt'       => 'Third slide',
-                    'headline'      => 'One more for good measure.',
-                    'text'          => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-                    'btn_href'      => '#',
-                    'btn_text'      => 'Browse gallery',
-                ),
-                array(
-                    'active'        => FALSE,
-                    'img_src'       => 'data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
-                    'img_data-src'  => NULL,
-                    'img_alt'       => 'Fourth forth',
-                    'headline'      => 'Because I can.',
-                    'text'          => 'I added this to my array and then I added another LI to the OL which helps the navigation -- which is how we have 4 slides (and dots) instead of 3.',
-                    'btn_href'      => '#',
-                    'btn_text'      => 'So there',
-                ),
-            );
+            $title = "Carousel Template for Bootstrap";
+            
             $marketing = array(
                 array(
                     'img_src'   => 'data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==',
@@ -682,15 +667,13 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'carousel';
             $data['brand']              = $this->brand;
-            $data['title']              = "Carousel Template for Bootstrap";            
-            $data['h1']                 = $data['title'];
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['navbardiv']          = $navbardiv;
             $data['navfoot']            = $this->navfoot;
             $data['copyright']          = $this->copyright;            
-            $data['carousel']           = $carousel;
-            $data['carousel_id']        = "myCarousel";
+            $data['carousel']           = $this->carousel_page;
             $data['marketing']          = $marketing;
             $data['featurette']         = $featurette;
         
@@ -706,11 +689,11 @@
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/navbar/close_wrapper');            
-            $this->load->view('bootstrap/theme/carousel',$data);
+            $this->load->view('bootstrap/carousel',$data);
             $this->load->view('bootstrap/carousel/marketing',$data);
             $this->load->view('bootstrap/carousel/featurette',$data);
             $this->load->view('bootstrap/footer',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot_docs',$data); 
         }
         
@@ -770,11 +753,15 @@
             $data['posts']          = $posts;
             $data['copyright']      = $this->copyright;
         
-            $this->load->view('bootstrap/head',$data);        
-            $this->load->view('bootstrap/blog/masthead',$data);        
-            $this->load->view('bootstrap/blog/header',$data);        
-            $this->load->view('bootstrap/blog/blog',$data);            
-            $this->load->view('bootstrap/blog/sidebar',$data);
+            $this->load->view('bootstrap/head',$data);         
+            $this->load->view('bootstrap/blog/masthead',$data);       
+            $this->load->view('bootstrap/container/open',$data);
+            $this->load->view('bootstrap/blog/header',$data);       
+            $this->load->view('bootstrap/row/open',$data);           
+            $this->load->view('bootstrap/blog/main',$data);            
+            $this->load->view('bootstrap/blog/sidebar',$data);       
+            $this->load->view('bootstrap/row/close',$data);       
+            $this->load->view('bootstrap/container/close',$data);
             $this->load->view('bootstrap/blog/footer',$data);
             $this->load->view('bootstrap/foot_docs',$data);
 
@@ -910,11 +897,17 @@
         
         public function sticky_footer()
         {
-            $lead_p = 'Pin a fixed-height footer to the bottom of the viewport'
-                . ' in desktop browsers with this custom HTML and CSS.';
-            $next_p = 'Use <a href="'
+            $title  = "Sticky Footer Template for Bootstrap";
+            $lead   = 'Pin a fixed-height footer to the bottom of the viewport in'
+                . ' desktop browsers with this custom HTML and CSS. Use <a href="'
                 . site_url('templates/sticky_footer_navbar/')
-                . '"\>the sticky footer with a fixed navbar</a> if need be, too.';
+                . '"\>the sticky footer with a fixed navbar</a>'
+                . ' if need be, too.';
+            
+            $page   = array(
+                'title' => $title,
+                'lead'  => $lead,
+            );
             
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
@@ -923,29 +916,39 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'sticky-footer';
             $data['brand']          = $this->brand;
-            $data['title']          = "Sticky Footer Template for Bootstrap";           
+            $data['title']          = $title;           
             $data['h1']             = $data['title'];
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
-            $data['lead_p']         = $lead_p;
-            $data['next_p']         = $next_p;
+            $data['page']           = $page;
             $data['copyright']      = $this->copyright;
         
-            $this->load->view('bootstrap/head',$data);            
-            $this->load->view('bootstrap/sticky_footer/header',$data);
+            $this->load->view('bootstrap/head',$data);
+            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/page_header',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
         
         public function sticky_footer_navbar()
         {
-            $lead_p = 'Pin a fixed-height footer to the bottom of the viewport
-                in desktop browsers with this custom HTML and CSS. A fixed
-                navbar has been added with <code>padding-top: 60px;</code> on
-                the <code>body > .container</code>.</p>';
-            $next_p = 'Back to <a href="'
+            $title  = "Sticky Footer Navbar Template for Bootstrap";
+            $lead   = 'Pin a fixed-height footer to the bottom of the viewport in'
+                . ' desktop browsers with this custom HTML and CSS. A fixed'
+                . ' navbar has been added with'
+                . ' <code>padding-top: 60px;</code>'
+                . ' on the'
+                . ' <code>body > .container</code>'
+                . '.</p><p>'
+                . 'Back to <a href="'
                 . site_url('templates/sticky_footer/')
-                . '"\>the default sticky footer</a> minus the navbar.';            
+                . '"\>the default sticky footer</a> minus the navbar.';
+            
+            $page   = array(
+                'title' => $title,
+                'lead'  => $lead,
+            );
             
             $navbardiv = array(
                 'subclass'  => 'default',
@@ -961,14 +964,13 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'sticky-footer-navbar';
             $data['brand']              = $this->brand;
-            $data['title']              = "Sticky Footer Navbar Template for Bootstrap";           
+            $data['title']              = $title;           
             $data['h1']                 = $data['title'];
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['navfoot']            = $this->navfoot;
-            $data['lead_p']             = $lead_p;
-            $data['next_p']             = $next_p;
+            $data['page']               = $page;
             $data['copyright']          = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
@@ -981,13 +983,26 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/sticky_footer/header',$data);
+            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/page_header',$data);
+            $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
         
         public function nonresponsive()
         {
+            $title  = "Non-responsive Template for Bootstrap";
+            $lead   = "Disable the responsiveness of Bootstrap by fixing the
+                width of the container and using the first grid system tier.
+                <a href=\"http://getbootstrap.com/getting-started/#disable-responsive\">Read the documentation</a>
+                for more information.";
+            
+            $page   = array(
+                'title' => $title,
+                'lead'  => $lead,
+            );
+            
             $navbardiv = array(
                 'subclass'  => 'default',
                 'top'       => 'fixed',
@@ -1002,8 +1017,9 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'non-responsive';
             $data['brand']              = $this->brand;
-            $data['title']              = "Non-responsive Template for Bootstrap";
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
+            $data['page']               = $page;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['navbar_right']       = $this->navbar_right; 
@@ -1021,6 +1037,7 @@
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/container_open',$data);
+            $this->load->view('bootstrap/page_header',$data);
             $this->load->view('bootstrap/nonresponsive/nonresponsive',$data);
             $this->load->view('bootstrap/container_close',$data);
             $this->load->view('bootstrap/foot',$data);
