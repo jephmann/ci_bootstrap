@@ -37,12 +37,12 @@ in MVC), *core* and *views* (the "V" in MVC) directories within the
 #### What I have done to CodeIgniter to accommodate Bootstrap
 In the root (ci_bootstrap) directory:
 - Created this README file
-- Created an *assets* directory, where *.css files, *.js files, image files and
+- Created an *assets* directory, where .css files, .js files, image files and
 the like are traditionally accessed in CodeIgniter. Global variables covering
 the filepaths are established in CIBS_Controller (read further). These folders
 would be empty at the start of a new CodeIgniter/Bootstrap project.
 - Created a *bootstrap* directory, into which I copied Bootstrap's assets;
-copied additional *.css and *.js files from Bootstrap (obtained via browser
+copied additional .css and .js files from Bootstrap (obtained via browser
 "View Source" into the *css* and *js* subdirectories (respectively). Global
 variables covering the filepaths are established in CIBS_Controller (read
 further).
