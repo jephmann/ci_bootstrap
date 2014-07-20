@@ -37,11 +37,15 @@ in MVC), *core* and *views* (the "V" in MVC) directories within the
 #### What I have done to CodeIgniter to accommodate Bootstrap
 In the root (ci_bootstrap) directory:
 - Created this README file
-- Created an *assets* directory, where *.css files, *.js files, image files and the
-like are traditionally accessed in CodeIgniter
+- Created an *assets* directory, where *.css files, *.js files, image files and
+the like are traditionally accessed in CodeIgniter. Global variables covering
+the filepaths are established in CIBS_Controller (read further). These folders
+would be empty at the start of a new CodeIgniter/Bootstrap project.
 - Created a *bootstrap* directory, into which I copied Bootstrap's assets;
-copied additional *.css and *.js files from Bootstrap (obtained via browser "View Source"
-into the *css* and *js* subdirectories (respectively).
+copied additional *.css and *.js files from Bootstrap (obtained via browser
+"View Source" into the *css* and *js* subdirectories (respectively). Global
+variables covering the filepaths are established in CIBS_Controller (read
+further).
 
 In *application*, which comes with CodeIgniter:
 
@@ -50,14 +54,15 @@ In *application*, which comes with CodeIgniter:
   - In *config.php*, established 'CIBS_' as the subclass prefix
   - In *constants.php*, added constant variables special to this project, which
 would be applied throughout the project
-  - In *routes.php*, changed the default controller from 'welcome' to 'templates'
+  - In *routes.php*, changed the default controller from 'welcome' to
+'templates'
 
 - In *controllers*:
   - Added several controller classes (including 'templates.php')
 
 - In *core*:
-  - Added CIBS_Controller subclass, which extends CI_Controller and which in turn
-would be exteneded in other controllers
+  - Added CIBS_Controller subclass, which extends CI_Controller and which in
+turn would be exteneded in other controllers
 
 - In *views*:
   - Created *bootstrap* directory; which contain Bootstrap's HTML fragments
