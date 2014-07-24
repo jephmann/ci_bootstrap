@@ -24,6 +24,8 @@ MVC back end with Bootstrap's responsive front end
 - Change any of Bootstrap's JavaScript (*.js) files
 - Create any new *.css files
 - Create any new *.js files
+- Rename the IDs or classes of any HTML element.
+- Create new IDs or classes for any HTML element.
 - Use assets other than those of Bootstrap
 - Connect to a database (array and objects are data sources for this project)
 - Create any CodeIgniter data models (the "M" in MVC)
@@ -31,6 +33,11 @@ MVC back end with Bootstrap's responsive front end
 - Make any changes to CodeIgniter outside the *config*, *controllers* (the "C"
 in MVC), *core* and *views* (the "V" in MVC) directories within the
 *application* directory
+
+The above tasks would fall under things which you would do when you build your
+own project about these combined frameworks. (Were I to conduct a MeetUp about
+this projects, I would declare these tasks -- especially Models -- "beyond the
+scope of this discussion".)
 
 =====
 
