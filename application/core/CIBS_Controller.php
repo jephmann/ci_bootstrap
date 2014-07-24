@@ -32,7 +32,9 @@ class CIBS_Controller extends CI_Controller
         public $navbar_class;
         public $navbar_dropdown;
         public $navbar_right;
+        public $alerts_sample;
         public $alerts;
+        public $thumbnail;
         public $progress;
         public $progress_shared;
         public $list_groups;
@@ -313,7 +315,7 @@ class CIBS_Controller extends CI_Controller
             );
             
             // sample alerts
-            $this->alerts = array(
+            $this->alerts_sample = array(
                 array(
                     'class'     => 'success',
                     'strong'    => "Well done!",
@@ -334,6 +336,38 @@ class CIBS_Controller extends CI_Controller
                     'strong'    => "Oh snap!",
                     'text'      => "Change a few things up and try submitting again.",
                 ),
+            );
+            
+            $this->alerts   = array(
+                'success'   => array(
+                    'class'     => 'success',
+                    'strong'    => "SUCCESS",
+                    'text'      => "Success, Will Robinson!",
+                ),
+                'info'   => array(
+                    'class'     => 'info',
+                    'strong'    => "FOR YOUR INFORMATION",
+                    'text'      => "Information, Will Robinson.",
+                ),
+                'warning'   => array(
+                    'class'     => 'warning',
+                    'strong'    => "WARNING",
+                    'text'      => "Warning, Will Robinson!",
+                ),
+                'danger'   => array(
+                    'class'     => 'danger',
+                    'strong'    => "DANGER",
+                    'text'      => "Danger, whatever your name is!",
+                ),
+            );
+            
+            $this->thumbnail    = array(
+                'data-src'  => 'holder.js/200x200',
+                'class'     => '',
+                'alt'       => 'A generic square placeholder image with a white'
+                    . ' border around it, making it resemble a photograph taken'
+                    . ' with an old instant camera',
+                'title'     => 'Sample Thumbnail',
             );
             
             // sample progress bar data (separate bars)

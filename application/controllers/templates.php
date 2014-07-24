@@ -124,6 +124,16 @@
                 'xs',
             );
             
+            $alerts = $this->alerts;
+            $alerts['success']['strong']    = 'SUCCESS!';
+            $alerts['success']['text']      = 'Success, Will Robinson!';
+            $alerts['info']['strong']       = 'FOR YOUR INFORMATION:';
+            $alerts['info']['text']         = 'Information, Will Robinson.';
+            $alerts['warning']['strong']    = 'WARNING!';
+            $alerts['warning']['text']      = 'Warning, Will Robinson!';
+            $alerts['danger']['strong']     = 'DANGER!';
+            $alerts['danger']['text']       = 'Danger, whatever your name is!';            
+            
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
             $data['bootstrap']      = $this->bootstrap;
@@ -145,7 +155,8 @@
             $data['navbars']            = $this->navbars;
             $data['navbar_class']       = $this->navbar_class;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
-            $data['alerts']             = $this->alerts;
+            $data['alerts']             = $alerts;
+            $data['thumbnail']           = $this->thumbnail;
             $data['progress']           = $this->progress;
             $data['progress_shared']    = $this->progress_shared;
             $data['list_groups']        = $this->list_groups;
@@ -167,28 +178,31 @@
             // jumbotron
             $this->load->view('bootstrap/jumbotron',$data);
             // buttons
-            $this->load->view('bootstrap/theme/intro/buttons',$data);
-            $this->load->view('bootstrap/theme/buttons',$data);            
+            $this->load->view('bootstrap/theme/intro/buttons');
+            $this->load->view('bootstrap/buttons/lg');
+            $this->load->view('bootstrap/buttons/btn');
+            $this->load->view('bootstrap/buttons/sm');
+            $this->load->view('bootstrap/buttons/xs');
             // tables
-            $this->load->view('bootstrap/theme/intro/tables',$data);
+            $this->load->view('bootstrap/theme/intro/tables');
             $this->load->view('bootstrap/theme/tables',$data);
             // thumbnails
-            $this->load->view('bootstrap/theme/intro/thumbnails',$data);
-            $this->load->view('bootstrap/theme/thumbnails',$data);
+            $this->load->view('bootstrap/theme/intro/thumbnails');
+            $this->load->view('bootstrap/thumbnail',$data);
             // labels
-            $this->load->view('bootstrap/theme/intro/labels',$data);
+            $this->load->view('bootstrap/theme/intro/labels');
             $this->load->view('bootstrap/theme/labels',$data);            
             // badges
-            $this->load->view('bootstrap/theme/intro/badges',$data);
+            $this->load->view('bootstrap/theme/intro/badges');
             $this->load->view('bootstrap/theme/badges',$data);
             // dropdown menus
-            $this->load->view('bootstrap/theme/intro/dropdown_menus',$data);
+            $this->load->view('bootstrap/theme/intro/dropdown_menus');
             $this->load->view('bootstrap/theme/dropdown_menus',$data);
             // navs
-            $this->load->view('bootstrap/theme/intro/navs',$data);
+            $this->load->view('bootstrap/theme/intro/navs');
             $this->load->view('bootstrap/theme/navs',$data);
             // navbars
-            $this->load->view('bootstrap/theme/intro/navbars',$data);
+            $this->load->view('bootstrap/theme/intro/navbars');
             // 'default' navbar style
             $this->load->view('bootstrap/theme/page/navbar_open_nav_0');
             $this->load->view('bootstrap/theme/page/navbar_open_container');
@@ -210,25 +224,28 @@
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
             // alerts
-            $this->load->view('bootstrap/theme/intro/alerts',$data);
-            $this->load->view('bootstrap/theme/alerts',$data);
+            $this->load->view('bootstrap/theme/intro/alerts');
+            $this->load->view('bootstrap/alerts/success',$data);
+            $this->load->view('bootstrap/alerts/info',$data);
+            $this->load->view('bootstrap/alerts/warning',$data);
+            $this->load->view('bootstrap/alerts/danger',$data);
             // progress bars
-            $this->load->view('bootstrap/theme/intro/progress_bars',$data);
+            $this->load->view('bootstrap/theme/intro/progress_bars');
             $this->load->view('bootstrap/theme/progress_bars',$data);
             // list groups
-            $this->load->view('bootstrap/theme/intro/list_groups',$data);
+            $this->load->view('bootstrap/theme/intro/list_groups');
             $this->load->view('bootstrap/theme/list_groups',$data);
             // panels
-            $this->load->view('bootstrap/theme/intro/panels',$data);
+            $this->load->view('bootstrap/theme/intro/panels');
             $this->load->view('bootstrap/theme/panels',$data);
             // wells
-            $this->load->view('bootstrap/theme/intro/wells',$data);
+            $this->load->view('bootstrap/theme/intro/wells');
             $this->load->view('bootstrap/theme/wells',$data);
             // carousel
-            $this->load->view('bootstrap/theme/intro/carousel',$data);
+            $this->load->view('bootstrap/theme/intro/carousel');
             $this->load->view('bootstrap/carousel',$data);
             // THE END
-            $this->load->view('bootstrap/theme/page/container_close',$data);
+            $this->load->view('bootstrap/theme/page/container_close');
             $this->load->view('bootstrap/foot_docs',$data);
 
         }
