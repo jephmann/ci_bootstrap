@@ -34,9 +34,9 @@ MVC back end with Bootstrap's responsive front end
 in MVC), *core* and *views* (the "V" in MVC) directories within the
 *application* directory
 
-The above tasks would fall under things which you would do when you build your
+The above tasks would fall under things which you might do if you build your
 own project about these combined frameworks. (Were I to conduct a MeetUp about
-this projects, I would declare these tasks -- especially Models -- "beyond the
+this project, I would declare these tasks -- especially Models -- "beyond the
 scope of this discussion".)
 
 =====
