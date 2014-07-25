@@ -54,9 +54,9 @@
         
         public function starter()
         {            
-            $lead = 'Use this document as a way to quickly start any new project.';
-            $lead .= '<br />';
-            $lead .= 'All you get is this text and a mostly barebones HTML document.';
+            $lead = 'Use this document as a way to quickly start any new'
+                . ' project.<br />All you get is this text and a mostly'
+                . ' barebones HTML document.';
             
             $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
@@ -117,11 +117,84 @@
                 'Danger',
                 'Link',
             );
+            
             $btn_size = array(
                 'lg',
                 NULL,
                 'sm',
                 'xs',
+            );
+            
+            $badges_link    = array(
+                'href'  => '#',
+                'title' => 'Inbox',
+                'text'  => 'Inbox',
+                'q'     => 42,
+            );
+            
+            $badges_nav     = array(
+                array(
+                    'active'    => TRUE,
+                    'href'      => '#',
+                    'text'      => 'Home',
+                    'q'         => 42,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => '#',
+                    'text'      => 'Profile',
+                    'q'         => NULL,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => '#',
+                    'text'      => 'Messages',
+                    'q'         => 3,
+                ),
+            );            
+            
+            $dropdown_menu   = array(
+                array(
+                    'id'    =>  'dropdownMenu1',
+                    'href'  =>  '#',
+                    'title' =>  'Dropdown1',
+                    'text'  =>  'Dropdown Menu One'
+                ),
+                array(
+                    'active'    => TRUE,
+                    'href'      => '#',
+                    'title'     => "Action",
+                    'text'      => "Action",
+                    'divider'   => FALSE,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => '#',
+                    'title'     => "Another action",
+                    'text'      => "Another action",
+                    'divider'   => FALSE,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => '#',
+                    'title'      => "Something else here",
+                    'text'      => "Something else here",
+                    'divider'   => FALSE,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => NULL,
+                    'title'     => NULL,
+                    'text'      => NULL,
+                    'divider'   => TRUE,
+                ),
+                array(
+                    'active'    => FALSE,
+                    'href'      => '#',
+                    'title'     => "Separated link",
+                    'text'      => "Separated link",
+                    'divider'   => FALSE,
+                ),        
             );
             
             $alerts = $this->alerts;
@@ -163,6 +236,9 @@
             $data['panels']             = $this->panels;
             $data['well_text']          = $this->well_text;
             $data['carousel']           = $this->carousel_theme;
+            $data['badges_link']        = $badges_link;
+            $data['badges_nav']         = $badges_nav;
+            $data['dropdown_menu']      = $dropdown_menu;
         
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/theme/page/navbar_open_nav');
@@ -209,10 +285,11 @@
             $this->load->view('bootstrap/theme/labels',$data);            
             // badges
             $this->load->view('bootstrap/theme/intro/badges');
-            $this->load->view('bootstrap/theme/badges',$data);
+            $this->load->view('bootstrap/badges/link',$data);
+            $this->load->view('bootstrap/badges/nav',$data);
             // dropdown menus
             $this->load->view('bootstrap/theme/intro/dropdown_menus');
-            $this->load->view('bootstrap/theme/dropdown_menus',$data);
+            $this->load->view('bootstrap/dropdown_menu',$data);
             // navs
             $this->load->view('bootstrap/theme/intro/navs');
             $this->load->view('bootstrap/theme/navs',$data);
