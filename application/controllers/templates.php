@@ -282,7 +282,7 @@
             $this->load->view('bootstrap/thumbnail',$data);
             // labels
             $this->load->view('bootstrap/theme/intro/labels');
-            $this->load->view('bootstrap/theme/labels',$data);            
+            $this->load->view('bootstrap/labels',$data);            
             // badges
             $this->load->view('bootstrap/theme/intro/badges');
             $this->load->view('bootstrap/badges/link',$data);
@@ -323,7 +323,8 @@
             $this->load->view('bootstrap/alerts/danger',$data);
             // progress bars
             $this->load->view('bootstrap/theme/intro/progress_bars');
-            $this->load->view('bootstrap/theme/progress_bars',$data);
+            $this->load->view('bootstrap/progress/bars',$data);
+            $this->load->view('bootstrap/progress/shared',$data);
             // list groups
             $this->load->view('bootstrap/theme/intro/list_groups');
             $this->load->view('bootstrap/row/open');
@@ -452,7 +453,9 @@
             $this->load->view('bootstrap/navbar/close');
             $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/container/open');
-            $this->load->view('bootstrap/jumbotron/row',$data);            
+            $this->load->view('bootstrap/row/open',$data);
+            $this->load->view('bootstrap/jumbotron/row',$data);
+            $this->load->view('bootstrap/row/close',$data);            
             $this->load->view('bootstrap/hr');
             $this->load->view('bootstrap/footer',$data);
             $this->load->view('bootstrap/container/close');
@@ -495,7 +498,15 @@
             $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/jumbotron-narrow/nav',$data);
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/jumbotron-narrow/marketing',$data);
+            $this->load->view('bootstrap/jumbotron-narrow/marketing_open');
+            $this->load->view('bootstrap/col/lg/6/open');
+            $this->load->view('bootstrap/jumbotron-narrow/left');
+            $this->load->view('bootstrap/col/lg/6/close');
+            $this->load->view('bootstrap/col/lg/6/open');
+            $this->load->view('bootstrap/jumbotron-narrow/right');
+            $this->load->view('bootstrap/col/lg/6/close');
+            $this->load->view('bootstrap/jumbotron-narrow/marketing_close');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/footer',$data);
             $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot_empty',$data);
@@ -1021,7 +1032,17 @@
             $this->load->view('bootstrap/container_open');            
             $this->load->view('bootstrap/justified_nav/masthead',$data);
             $this->load->view('bootstrap/jumbotron',$data);
-            $this->load->view('bootstrap/justified_nav/row',$data);
+            $this->load->view('bootstrap/row/open',$data);
+            $this->load->view('bootstrap/col/lg/4/open');
+            $this->load->view('bootstrap/justified_nav/left',$data);
+            $this->load->view('bootstrap/col/lg/4/close');
+            $this->load->view('bootstrap/col/lg/4/open');
+            $this->load->view('bootstrap/justified_nav/center',$data);
+            $this->load->view('bootstrap/col/lg/4/close');
+            $this->load->view('bootstrap/col/lg/4/open');
+            $this->load->view('bootstrap/justified_nav/right',$data);
+            $this->load->view('bootstrap/col/lg/4/close');
+            $this->load->view('bootstrap/row/close',$data);
             $this->load->view('bootstrap/footer',$data);
             $this->load->view('bootstrap/container_close');
             $this->load->view('bootstrap/foot',$data);
