@@ -156,7 +156,7 @@
             $data['navbar_class']       = $this->navbar_class;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['alerts']             = $alerts;
-            $data['thumbnail']           = $this->thumbnail;
+            $data['thumbnail']          = $this->thumbnail;
             $data['progress']           = $this->progress;
             $data['progress_shared']    = $this->progress_shared;
             $data['list_groups']        = $this->list_groups;
@@ -185,7 +185,22 @@
             $this->load->view('bootstrap/buttons/xs');
             // tables
             $this->load->view('bootstrap/theme/intro/tables');
-            $this->load->view('bootstrap/theme/tables',$data);
+            $this->load->view('bootstrap/row/open');
+            $this->load->view('bootstrap/col/md/6/open');
+            $this->load->view('bootstrap/tables/table',$data);
+            $this->load->view('bootstrap/col/md/6/close');
+            $this->load->view('bootstrap/col/md/6/open');
+            $this->load->view('bootstrap/tables/striped',$data);
+            $this->load->view('bootstrap/col/md/6/close');
+            $this->load->view('bootstrap/row/close');
+            $this->load->view('bootstrap/row/open');
+            $this->load->view('bootstrap/col/md/6/open');
+            $this->load->view('bootstrap/tables/bordered',$data);
+            $this->load->view('bootstrap/col/md/6/close');
+            $this->load->view('bootstrap/col/md/6/open');
+            $this->load->view('bootstrap/tables/condensed',$data);
+            $this->load->view('bootstrap/col/md/6/close');
+            $this->load->view('bootstrap/row/close');
             // thumbnails
             $this->load->view('bootstrap/theme/intro/thumbnails');
             $this->load->view('bootstrap/thumbnail',$data);
@@ -234,13 +249,36 @@
             $this->load->view('bootstrap/theme/progress_bars',$data);
             // list groups
             $this->load->view('bootstrap/theme/intro/list_groups');
-            $this->load->view('bootstrap/theme/list_groups',$data);
+            $this->load->view('bootstrap/row/open');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/list-groups/ul',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/list-groups/a',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/list-groups/h4',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/row/close');
             // panels
             $this->load->view('bootstrap/theme/intro/panels');
-            $this->load->view('bootstrap/theme/panels',$data);
+            $this->load->view('bootstrap/row/open');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/panels/default',$data);
+            $this->load->view('bootstrap/panels/primary',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/panels/success',$data);
+            $this->load->view('bootstrap/panels/info',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/col/sm/4/open');
+            $this->load->view('bootstrap/panels/warning',$data);
+            $this->load->view('bootstrap/panels/danger',$data);
+            $this->load->view('bootstrap/col/sm/4/close');
+            $this->load->view('bootstrap/row/close');
             // wells
             $this->load->view('bootstrap/theme/intro/wells');
-            $this->load->view('bootstrap/theme/wells',$data);
+            $this->load->view('bootstrap/well',$data);
             // carousel
             $this->load->view('bootstrap/theme/intro/carousel');
             $this->load->view('bootstrap/carousel',$data);
@@ -933,17 +971,16 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'sticky-footer';
             $data['brand']          = $this->brand;
-            $data['title']          = $title;           
-            $data['h1']             = $data['title'];
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['page']           = $page;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/page_header',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
@@ -981,8 +1018,7 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'sticky-footer-navbar';
             $data['brand']              = $this->brand;
-            $data['title']              = $title;           
-            $data['h1']                 = $data['title'];
+            $data['title']              = $title; 
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
@@ -1000,9 +1036,9 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open');
+            $this->load->view('bootstrap/container/open');
             $this->load->view('bootstrap/page_header',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/sticky_footer/footer',$data);
             $this->load->view('bootstrap/foot',$data);
         }
