@@ -53,7 +53,9 @@
         }
         
         public function starter()
-        {            
+        {
+            $title = "Starter Template for Bootstrap";
+            
             $lead = 'Use this document as a way to quickly start any new'
                 . ' project.<br />All you get is this text and a mostly'
                 . ' barebones HTML document.';
@@ -65,7 +67,7 @@
             $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'starter-template';
             $data['brand']              = $this->brand;
-            $data['title']              = "Starter Template for Bootstrap";
+            $data['title']              = $title;
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $this->starter_navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
@@ -250,7 +252,7 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/theme/page/container_open',$data);
+            $this->load->view('bootstrap/showcase/open',$data);
             // jumbotron
             $this->load->view('bootstrap/jumbotron',$data);
             // buttons
@@ -263,18 +265,30 @@
             $this->load->view('bootstrap/theme/intro/tables');
             $this->load->view('bootstrap/row/open');
             $this->load->view('bootstrap/col/md/6/open');
-            $this->load->view('bootstrap/tables/table',$data);
+            $this->load->view('bootstrap/tables/table/open');
+            $this->load->view('bootstrap/tables/thead',$data);
+            $this->load->view('bootstrap/tables/table/tbody',$data);
+            $this->load->view('bootstrap/tables/close');
             $this->load->view('bootstrap/col/md/6/close');
             $this->load->view('bootstrap/col/md/6/open');
-            $this->load->view('bootstrap/tables/striped',$data);
+            $this->load->view('bootstrap/tables/striped/open');
+            $this->load->view('bootstrap/tables/thead',$data);
+            $this->load->view('bootstrap/tables/striped/tbody',$data);
+            $this->load->view('bootstrap/tables/close');
             $this->load->view('bootstrap/col/md/6/close');
             $this->load->view('bootstrap/row/close');
             $this->load->view('bootstrap/row/open');
             $this->load->view('bootstrap/col/md/6/open');
-            $this->load->view('bootstrap/tables/bordered',$data);
+            $this->load->view('bootstrap/tables/bordered/open');
+            $this->load->view('bootstrap/tables/thead',$data);
+            $this->load->view('bootstrap/tables/bordered/tbody',$data);
+            $this->load->view('bootstrap/tables/close');
             $this->load->view('bootstrap/col/md/6/close');
             $this->load->view('bootstrap/col/md/6/open');
-            $this->load->view('bootstrap/tables/condensed',$data);
+            $this->load->view('bootstrap/tables/condensed/open');
+            $this->load->view('bootstrap/tables/thead',$data);
+            $this->load->view('bootstrap/tables/condensed/tbody',$data);
+            $this->load->view('bootstrap/tables/close');
             $this->load->view('bootstrap/col/md/6/close');
             $this->load->view('bootstrap/row/close');
             // thumbnails
@@ -361,7 +375,7 @@
             $this->load->view('bootstrap/theme/intro/carousel');
             $this->load->view('bootstrap/carousel',$data);
             // THE END
-            $this->load->view('bootstrap/theme/page/container_close');
+            $this->load->view('bootstrap/showcase/close');
             $this->load->view('bootstrap/foot_docs',$data);
 
         }
@@ -842,6 +856,8 @@
         
         public function blog()
         {
+            $title = "Blog Template for Bootstrap";
+            
             $posts = array(
                 array(
                     'title'     => 'Sample blog post',
@@ -889,8 +905,7 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'blog';
             $data['brand']          = $this->brand;
-            $data['title']          = "Blog Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = $title;
             $data['navbar']         = $this->navbar; 
             $data['lead_p']         = $lead_p;
             $data['posts']          = $posts;
@@ -912,6 +927,8 @@
         
         public function dashboard()
         {
+            $title  = "Dashboard Template for Bootstrap";
+            
             $dashboard = array(
                 array(
                     'img_data-src'  => 'holder.js/200x200/auto/sky',
@@ -956,32 +973,55 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'dashboard';
             $data['brand']          = $this->brand;
-            $data['title']          = "Dashboard Template for Bootstrap";            
-            $data['h1']             = $data['title'];
+            $data['title']          = $title; 
             $data['navbar']         = $this->navbar; 
             $data['navbardiv']      = $navbardiv; 
             $data['h2']             = "Table Section";
             $data['copyright']      = $this->copyright;
             
-            $data['dashboard']  = $dashboard;
-            $data['thead']      = $thead;
+            $data['dashboard']      = $dashboard;
+            $data['table_th']       = $thead;
         
+            // head
             $this->load->view('bootstrap/head',$data);
+            // top navbar
             $this->load->view('bootstrap/navbar/open_nav');
             $this->load->view('bootstrap/navbar/open_container');
             $this->load->view('bootstrap/navbar/header');
             $this->load->view('bootstrap/navbar/open_collapse');
             $this->load->view('bootstrap/dashboard/navbar',$data);
+            $this->load->view('bootstrap/dashboard/navbar_form',$data);
             $this->load->view('bootstrap/navbar/close');
+            // row/container open
+            $this->load->view('bootstrap/container/fluid/open');
+            $this->load->view('bootstrap/row/open');
+            // side navbar
             $this->load->view('bootstrap/dashboard/nav_sidebar',$data);
+            // main open
+            $this->load->view('bootstrap/dashboard/main_open',$data);
+            // dashboard section
+            $this->load->view('bootstrap/dashboard/page_header',$data);
             $this->load->view('bootstrap/dashboard/dashboard',$data);
-            $this->load->view('bootstrap/dashboard/table',$data);
-            $this->load->view('bootstrap/foot_docs',$data);
-            
+            // table section
+            $this->load->view('bootstrap/dashboard/subheader',$data);            
+            $this->load->view('bootstrap/tables/responsive/open');
+            $this->load->view('bootstrap/tables/striped/open');
+            $this->load->view('bootstrap/tables/thead',$data);
+            $this->load->view('bootstrap/dashboard/tbody',$data);
+            $this->load->view('bootstrap/tables/close');
+            $this->load->view('bootstrap/tables/responsive/close');
+            // main close
+            $this->load->view('bootstrap/dashboard/main_close',$data);
+            // row/container close
+            $this->load->view('bootstrap/row/close');
+            $this->load->view('bootstrap/container/fluid/close');
+            // foot
+            $this->load->view('bootstrap/foot_docs',$data);            
         }
         
         public function signin()
         {
+            $title = "Signin Template for Bootstrap";
             
             $data['viewport']       = TRUE;
             $data['body_role']      = 'document';
@@ -990,7 +1030,7 @@
             $data['bootstrap_js']   = $this->bootstrap_js;
             $data['custom_css']     = 'signin';
             $data['brand']          = $this->brand;
-            $data['title']          = "Signin Template for Bootstrap";
+            $data['title']          = $title;
             $data['action']         = '';
             $data['copyright']      = $this->copyright;
         
@@ -1024,12 +1064,13 @@
             $data['custom_css']     = 'justified_nav';
             $data['brand']          = $this->brand;
             $data['title']          = $title;
+            $data['jumbotron']      = $jumbotron;
             $data['navbar']         = $this->navbar;
             $data['navfoot']        = $this->navfoot;
             $data['copyright']      = $this->copyright;
         
             $this->load->view('bootstrap/head',$data);
-            $this->load->view('bootstrap/container_open');            
+            $this->load->view('bootstrap/container/open');            
             $this->load->view('bootstrap/justified_nav/masthead',$data);
             $this->load->view('bootstrap/jumbotron',$data);
             $this->load->view('bootstrap/row/open',$data);
@@ -1044,7 +1085,7 @@
             $this->load->view('bootstrap/col/lg/4/close');
             $this->load->view('bootstrap/row/close',$data);
             $this->load->view('bootstrap/footer',$data);
-            $this->load->view('bootstrap/container_close');
+            $this->load->view('bootstrap/container/close');
             $this->load->view('bootstrap/foot',$data);
         }
         
@@ -1187,10 +1228,10 @@
             $this->load->view('bootstrap/navbar/close_bar');
             $this->load->view('bootstrap/navbar/right',$data);
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open',$data);
+            $this->load->view('bootstrap/container/open',$data);
             $this->load->view('bootstrap/page_header',$data);
             $this->load->view('bootstrap/nonresponsive/nonresponsive',$data);
-            $this->load->view('bootstrap/container_close',$data);
+            $this->load->view('bootstrap/container/close',$data);
             $this->load->view('bootstrap/foot',$data);
         }
         
@@ -1244,7 +1285,7 @@
             $this->load->view('bootstrap/navbar/li_dropdown',$data);
             $this->load->view('bootstrap/navbar/close_bar'); 
             $this->load->view('bootstrap/navbar/close');
-            $this->load->view('bootstrap/container_open',$data);            
+            $this->load->view('bootstrap/container/open',$data);            
             $this->load->view('bootstrap/offcanvas/row_open',$data);
             $this->load->view('bootstrap/offcanvas/col_open',$data);
             $this->load->view('bootstrap/offcanvas/toggle_nav',$data);
@@ -1255,7 +1296,7 @@
             $this->load->view('bootstrap/offcanvas/row_close');
             $this->load->view('bootstrap/hr',$data);
             $this->load->view('bootstrap/footer',$data);
-            $this->load->view('bootstrap/container_close',$data);
+            $this->load->view('bootstrap/container/close',$data);
             $this->load->view('bootstrap/foot_docs',$data);
         }
         
