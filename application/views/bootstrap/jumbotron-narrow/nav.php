@@ -10,6 +10,6 @@
         <?php endfor; ?>
     </ul>
     <h3 class="text-muted">
-        <a href="<?php echo site_url(''); ?>"><?php echo $brand; ?></a>
+        <a href="<?php echo site_url(''); ?>"><?php echo CB_BRAND; ?></a>
     </h3>
 </div>

@@ -1,7 +1,7 @@
 
 <div class="masthead clearfix">
     <div class="inner">
-        <h3 class="masthead-brand"><?php echo $brand ?></h3>
+        <h3 class="masthead-brand"><?php echo CB_BRAND; ?></h3>
         <ul class="nav masthead-nav">                            
             <?php for($n=0; $n<count($navbar); $n++) : ?>
             <li<?php if($this->uri->uri_string() == $navbar[$n]['href']) echo " class=\"active\""; ?>>

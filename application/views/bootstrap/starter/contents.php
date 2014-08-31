@@ -1,5 +1,5 @@
 <div class="starter-template">
-    <h1><?php echo $brand; ?></h1>
+    <h1><?php echo CB_BRAND; ?></h1>
     <h2><?php echo $title; ?></h2>    
     <?php
         for($c=1; $c<count($navbar_dropdown); $c++) :

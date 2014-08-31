@@ -1,5 +1,5 @@
 <div class="masthead">
-    <h3 class="text-muted"><?php echo $brand; ?></h3>
+    <h3 class="text-muted"><?php echo CB_BRAND; ?></h3>
     <ul class="nav nav-justified">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Projects</a></li>

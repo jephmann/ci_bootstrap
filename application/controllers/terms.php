@@ -15,18 +15,13 @@
             
             $data['viewport']           = TRUE;
             $data['body_role']          = 'document';
-            $data['bootstrap']          = $this->bootstrap;
-            $data['bootstrap_css']      = $this->bootstrap_css;
-            $data['bootstrap_js']       = $this->bootstrap_js;
             $data['custom_css']         = 'starter-template';
-            $data['brand']              = $this->brand;
             $data['title']              = "Terms";
             $data['navbar']             = $this->navbar;
             $data['navbardiv']          = $this->starter_navbardiv;
             $data['navbar_dropdown']    = $this->navbar_dropdown;
             $data['navfoot']            = $this->navfoot;
             $data['lead']               = $lead;
-            $data['copyright']          = $this->copyright;
 
             $this->load->view('bootstrap/head',$data);
             $this->load->view('bootstrap/navbar/open_nav');

@@ -8,5 +8,5 @@
     </button>
     <a class="navbar-brand" href="<?php
     echo site_url(''); ?>"><?php
-    echo $brand; ?></a>
+    echo CB_BRAND; ?></a>
 </div>
