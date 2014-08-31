@@ -45,40 +45,44 @@ scope of this discussion".)
 In the root (ci_bootstrap) directory:
 - Created this README file
 - Created an *assets* directory, where .css files, .js files, image files and
-the like are traditionally accessed in CodeIgniter. Global variables covering
+the like are traditionally accessed in CodeIgniter. Global constants covering
 the filepaths are established in CIBS_Controller (read further). These folders
 would be empty at the start of a new CodeIgniter/Bootstrap project.
 - Created a *bootstrap* directory, into which I copied Bootstrap's assets;
 copied additional .css and .js files from Bootstrap (obtained via browser
 "View Source" into the *css* and *js* subdirectories (respectively). Global
-variables covering the filepaths are established in CIBS_Controller (read
+constants covering the filepaths are established in CIBS_Controller (read
 further).
 
 In *application*, which comes with CodeIgniter:
 
 - In *config*:
-  - In *autoload.php*, autoloaded 'url' and 'file' helpers across the project
-  - In *config.php*, established 'CIBS_' as the subclass prefix
+  - In *autoload.php*, autoloaded 'url' and 'file' helpers across the project.
+  - In *config.php*, established 'CIBS_' as the subclass prefix.
   - In *constants.php*, added constant variables special to this project, which
-would be applied throughout the project
+would be applied throughout the project. Constants which could not be defined
+in this file would be defined in CIBS_Controller (read further).
   - In *routes.php*, changed the default controller from 'welcome' to
-'templates'
+'templates'.
 
 - In *controllers*:
-  - Added several controller classes (including 'templates.php')
+  - Added several controller classes (including 'templates.php').
 
 - In *core*:
   - Added CIBS_Controller subclass, which extends CI_Controller and which in
-turn would be exteneded in other controllers
+turn would be extended in other controllers. Among other things, global values
+are established to be applied throughout the project, including constants which
+could not be defined in *config/constants.php*.
 
 - In *views*:
-  - Created *bootstrap* directory; which contain Bootstrap's HTML fragments
+  - Created *bootstrap* directory, which contain Bootstrap's HTML fragments
 (obtained via browser "View Source") readapted to include PHP logic (e.g. loops)
-and PHP variables populated via controllers
+and PHP variables populated via controllers.
 
 The *system* and *user_guide* directories which come with CodeIgniter were
 untouched. The *user_guide* is non-essential to CodeIgniter functionality and
-thus I withheld it from GitHub
+thus I withheld it from GitHub; I may restore it nonetheless depending on
+popular demand.
 
 =====
 
