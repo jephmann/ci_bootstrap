@@ -35,7 +35,7 @@ in MVC), *core* and *views* (the "V" in MVC) directories within the
 *application* directory
 
 The above tasks would fall under things which you might do if you build your
-own project about these combined frameworks. (Were I to conduct a MeetUp about
+own project using these combined frameworks. (Were I to conduct a MeetUp about
 this project, I would declare these tasks -- especially Models -- "beyond the
 scope of this discussion".)
 
@@ -271,6 +271,7 @@ Suggested additional pages:
 *application/views/bootstrap/* -- comb for areas of repetition; then revise
 *application/controllers/* (especially *templates.php* but maybe others)
 accordingly
+- Explore other sections of getbootstrap.com; currently reviewing Components.
 
 =====
 
